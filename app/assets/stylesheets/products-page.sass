@@ -1,0 +1,61 @@
+.products-page
+	.filter-btn-box
+		padding: 20px 0 40px
+		.one-filter-btn
+			display: inline-block
+			border-right: 1px solid $light-blue-color
+			font-size: 20px
+			cursor: pointer
+			line-height: 2
+			letter-spacing: 2px
+			padding: 0 10px
+			font-family: AD
+			&:first-child
+				border-left: 1px solid $light-blue-color
+			&.active
+				color: $red-color
+
+		select
+			border: none
+			background-color: transparent
+			display: inline-block
+			margin-left: 10px
+			cursor: pointer
+			width: calc(50% - 10px)
+			&:focus 
+				outline: none
+
+	.products-container
+		.one-product
+			margin-bottom: 40px
+			cursor: pointer
+			.inner-container
+				position: relative
+				padding-bottom: 100%
+				background-color: white
+				.img-product
+					+centered-inside
+					background-position: center
+					background-repeat: no-repeat
+
+				.apt, .manufacturer-box, .prise
+					position: absolute
+				.manufacturer-box, .prise
+					bottom: 10px	
+				.manufacturer-box
+					text-transform: uppercase
+					font-size: 12px
+				.manufacturer-box, .apt
+					left: 10px
+				.apt
+					top: 10px
+					font-size: 10px
+				.prise
+					right: 10px
+					font-size: 26px
+					color: $red-color
+
+			.title
+				font-size: 18px
+				margin-top: 10px
+				font-weight: 600

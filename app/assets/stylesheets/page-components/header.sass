@@ -1,0 +1,60 @@
+.header-container
+	// position: fixed
+	position: absolute
+	padding: 20px 15px
+	width: 100%
+	background: transparent
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	+transition-property(transform)
+	+transition-duration(1s)
+	// +translate(0,-100%)
+	z-index: 11
+	// &.scrolled, &.visible
+	//   +translate(0,0)
+	// @media #{$small-only}
+	// @media #{$xxlarge-up}
+	&.scrolled
+		background-color: $black-color
+	+breakpoint(xxlarge up)
+		padding: 45px 30px
+	
+			// *
+			//  fill: white !important
+
+		&:hover
+			svg
+	.logo, .right-part
+		align-self: center
+
+	.logo
+		&:hover
+			svg
+				*
+					fill: $red-color !important
+	.right-part
+		
+
+		.burger-manu
+			display: inline-block
+			width: 40px
+			height: 40px
+			cursor: pointer
+
+	&.black
+		&.scrolled
+			background-color: $white-color
+		.logo
+			svg
+				*
+					fill: $red-color !important
+
+		.right-part
+			ul
+				.nav
+					a
+						color: $black-color

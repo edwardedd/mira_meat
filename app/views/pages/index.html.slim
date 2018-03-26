@@ -1,0 +1,111 @@
+= render "main_banner"
+.product-wrap.section-indent
+	.img-bg style="background-image: url(#{asset_path('svg/MM-beast-v1.svg')})"
+	.row
+		.medium-6.columns.medium-centered
+			.title-svg-box продукція
+			.red-line
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto commodi harum nesciunt quia veniam cupiditate incidunt quidem velit, quisquam soluta animi quod odit accusantium amet nihil vitae earum distinctio.
+
+	.maet-types-wrap
+		.row
+			.large-6.columns
+				a.one-container-dotted.big href=""
+					.inner-border
+					.content-box.font-ad
+						= inline_svg "svg/MM-beast-v1.svg"
+						.title-svg-line-box.big свинина
+						.sub-title власне виробництво
+			.large-6.columns
+				.row
+					.medium-6.large-6.columns
+						a.one-container-dotted href=""
+							.content-box.font-ad
+								= inline_svg "svg/MM-beast-v1.svg"
+								.title-svg-line-box яловичина
+								.sub-title імпорт
+
+					.medium-6.large-6.columns
+						a.one-container-dotted href=""
+							.content-box.font-ad
+								= inline_svg "svg/MM-beast-v1.svg"
+								.title-svg-line-box курятина
+								.sub-title імпорт
+
+					.medium-6.large-6.columns
+						a.one-container-dotted href=""
+							.content-box.font-ad
+								= inline_svg "svg/MM-beast-v1.svg"
+								.title-svg-line-box індичатина
+								.sub-title імпорт
+					.medium-6.large-6.columns
+						a.one-container-dotted href=""
+							.content-box.font-ad
+								= inline_svg "svg/MM-beast-v1.svg"
+								.title-svg-line-box свинина
+								.sub-title імпорт
+
+
+.about-us-wrap.section-indent
+	.row
+		.medium-6.columns.medium-centered
+			.title-svg-box продукція
+			.red-line
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto commodi harum nesciunt quia veniam cupiditate incidunt quidem 
+
+	.content-box
+		.row
+			.medium-4.columns
+				.big-title лідер на ринку
+				.red-line
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aut sit nostrum veniam quidem reprehenderit cupiditate eum, dolorum. Nihil magni fugiat nisi, amet eius quasi ad totam. Velit iusto, eligendi.
+				.button 
+					|детальніше
+					.inner-border
+			.medium-7.columns
+				= render "video_block"
+
+
+	.svg-box
+		.row
+			.medium-11.columns.medium-centered
+				.row
+					.medium-4.columns
+						= inline_svg "svg/MM-advantages-1-v1.svg"
+					.medium-4.columns
+						= inline_svg "svg/MM-advantages-2-v1.svg"
+					.medium-4.columns
+						= inline_svg "svg/MM-advantages-3-v1.svg"
+
+
+.products-tupe-wrap
+	a.one-product-tupe-box.one-container-dotted href=""
+		.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
+		.title-svg-line-box.big.white виробництво
+
+	a.one-product-tupe-box.one-container-dotted href=""
+		.img-bg style="background-image: url(#{asset_path('photo/MM-img-whosale-v1.jpg')})"
+		.title-svg-line-box.big.white гуртовикам
+
+	a.one-product-tupe-box.one-container-dotted href=""
+		.img-bg style="background-image: url(#{asset_path('photo/MM-img-retail-v1.jpg')})"
+		.title-svg-line-box.big.white роздріб
+
+
+.news-wrap.section-indent
+	.title-svg-box новини
+	.row.columns-left
+		- 5.times do |i|
+			.medium-6.large-4.columns
+				a.news-one href=one_news_page_path
+					.date 21 листопада, 2017
+					.big-title лідер на ринку на ринку 
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+
+	
+		a.button href="" 
+			| всі новини
+			.inner-border
+
+
+= render "partners_slider_wrap"

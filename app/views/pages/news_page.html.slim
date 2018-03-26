@@ -1,0 +1,36 @@
+.news-page.white-bg
+	.page-title Новини
+	.row
+		.medium-6.columns
+			.img-box style="background-image: url(#{asset_path('photo/sample-8.jpg')})"
+		.medium-5.columns
+			a.news-one.big href=one_news_page_path
+				.inner-container
+					.date 21 листопада, 2017
+					.big-title лідер на ринку на ринку 
+					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+					.button
+						.inner-border
+						| читати
+
+	.all-news-wrap
+		.row.columns-left
+			- 8.times do |i|
+				.medium-6.large-4.columns
+					a.news-one href=one_news_page_path
+						.date 21 листопада, 2017
+						.big-title лідер на ринку на ринку 
+						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+
+
+	.padination-box
+		= inline_svg "svg/ic_keyboard_arrow_left_black_24px.svg"
+		span.one 1
+		span.one.active 2
+		span.one 3
+		span.one 4
+		span.one 5
+		= inline_svg "svg/ic_keyboard_arrow_right_black_24px.svg"
+
+
+= render "partners_slider_wrap"

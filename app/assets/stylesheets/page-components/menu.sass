@@ -1,0 +1,89 @@
+.manu-container
+	position: fixed
+	// margin: 30px
+	
+	+translate(0,-200%)
+	z-index: 100
+	width: 100%
+	min-height: 100vh
+	overflow: hidden
+	pointer-events: none
+	+transition(.3s)
+	color: $white-color
+	&.opened
+		+translate(0,0)
+		pointer-events: initial
+
+
+	.main-container-manu
+		display: flex
+		align-items: flex-end
+		+translate(0,15%)
+		@media only screen and (min-width: 1710px)
+			+translate(0,50%)
+	.general-part
+		background-color: $red-color
+		width: calc(100% - 100px)
+		.manu-nav
+			counter-reset: list
+			li
+				text-transform: uppercase
+				counter-increment: list
+				font-family: AD
+				font-size: 40px
+				letter-spacing: 5px
+				margin-bottom: 25px
+				// +transition(.3s)
+				&:last-child
+					margin-bottom: 0
+				&:before
+					content: "0"counter(list)
+					font-size: 16px
+					margin-right: 15px
+				&:hover
+					letter-spacing: 7px
+			+breakpoint(xxlarge up)
+				li
+					font-size: 48px
+					&:before
+						font-size: 18px
+
+	.social-container
+		background-color: $white-color
+		width: 100px
+		position: relative
+		.close-button
+			width: 50px
+			height: 50px
+			cursor: pointer
+			+transition(.3s)
+			&:hover
+				svg
+					*
+						stroke: $red-color !important
+		.social-box
+			position: absolute
+			bottom: 30px
+			svg
+				margin: 20px auto
+			
+
+	.general-part, .social-container
+		padding: 30px
+		display: inline-block
+		height: 100vh
+		vertical-align: middle
+
+	.contact-us-box
+		margin: 0 0 2px 200px
+		
+		+breakpoint(medium up)
+			margin: 0 0 2px 140px
+			position: absolute
+			left: 50%
+			+translate(-50%,0)
+		+breakpoint(small only)
+
+
+
+		

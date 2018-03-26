@@ -1,0 +1,34 @@
+.popup-wrapper.white-bg
+	.close-popup = inline_svg "svg/MM-menu-close-v1.svg"
+	.title.font-ad форма замовлення
+	form
+		.input-field
+			input#name name="firstname"
+			label Імʼя
+		.input-field
+			input#phone name="phone"
+			label Телефон
+		.input-field
+			input#mail name="mail"
+			label Ел.скринька
+		.input-field
+			select
+				option value="all" Вся прокукція
+				option value=".inport" Імпорт
+				option value=".export" Експорт
+		.input-field		
+			select
+				option value="myorder:asc" data-sort="order:asc" Ціна за зростанням
+				option value="myorder:desc" data-sort="order:desc" Ціна за спаданням
+
+
+		.input-field
+			textarea#textarea rows="10"
+			label.textarea ваші побажання...
+
+		button.button.red-btn
+			| замовити
+			.inner-border
+
+	.success.white-bg
+		.title ваша заявка успішно відправленна

@@ -1,0 +1,130 @@
+.product-wrap
+	text-align: center
+	position: relative
+	.red-line
+		margin: 20px auto
+
+	.maet-types-wrap
+		margin-top: 70px
+		.one-container-dotted
+			position: relative
+			display: block
+			padding-bottom: 100%
+			background-color: $white-color
+			margin-bottom: 30px
+			&:hover
+				&:before
+					border: 1px solid $light-blue-color
+			.content-box
+				+xy-align
+				width: 100%
+				svg
+					width: 50%
+
+				.sub-title
+					text-transform: uppercase
+					letter-spacing: 5px
+					margin-top: 5px
+
+			&.big
+				.content-box
+					svg
+						width: 60%
+
+
+			+breakpoint(small only)
+				padding-bottom: 50%
+				.content-box
+					svg
+						display: none
+					.title-svg-line-box
+						font-size: 40px
+
+				&.big
+					padding-bottom: 100%
+					.content-box
+						svg
+							display: inline-block
+
+
+.about-us-wrap
+	background-color: $white-color
+	p
+		text-align: center
+	.content-box
+		margin-top: 50px
+		.red-line
+			margin: 20px 0
+		p
+			margin-bottom: 30px
+			text-align: left
+
+	.video-wrap
+		&:before
+			content: ""
+			position: absolute
+			top: -10px
+			right: -10px
+			bottom: -10px
+			left: -10px
+			border: 1px solid $light-blue-color
+
+
+	.svg-box
+		padding: 100px 0 170px
+		svg
+			width: 70%
+			height: 70%
+
+	+breakpoint(small only)
+		.video-wrap
+			margin-top: 50px
+
+		.svg-box
+			padding: 70px 0
+			svg
+				margin: 50px
+
+.products-tupe-wrap
+	display: flex
+	.one-product-tupe-box
+		padding-bottom: 50%
+		width: 33.3%
+		overflow: hidden
+		.title-svg-line-box
+			+x-align
+			bottom: 50px
+			color: $white-color
+			svg
+
+		.img-bg
+			&:before
+				content: ""
+				display: block
+				+fullsize
+				background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.05) 29%, rgba(0,0,0,0.45) 93%, rgba(0,0,0,0.7) 100%)
+				background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.05) 29%,rgba(0,0,0,0.45) 93%,rgba(0,0,0,0.7) 100%)
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.05) 29%,rgba(0,0,0,0.45) 93%,rgba(0,0,0,0.7) 100%)
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 )
+		&:hover
+			.img-bg
+				+scale(1.1)
+
+	+breakpoint(small only)
+		flex-direction: column
+		.one-product-tupe-box
+			width: 100%
+			padding-bottom: 80%
+
+
+.news-wrap
+	background-color: $white-color
+	position: relative
+	padding-bottom: 150px
+	.title-svg-box
+		margin-bottom: 50px
+
+	.button
+		+x-align
+		bottom: 90px
+

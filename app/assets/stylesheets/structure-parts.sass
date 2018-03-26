@@ -1,0 +1,169 @@
+.row.columns-left
+	.columns
+		float: left !important
+
+.dib
+	display: inline-block
+	vertical-align: middle
+	line-height: 1
+
+.clearfix
+	position: relative
+	+clearfix
+	.floated
+		float: left
+	.floated-right
+		float: right
+
+.float-right
+	@media #{$medium-up}
+		float: right !important
+.float-left
+	@media #{$medium-up}
+		float: left !important
+
+.mobile
+	@media #{$medium-up}
+		display: none
+.desktop
+	@media #{$small-only}
+		display: none
+
+.img-container
+	position: relative
+	width: 100%
+	height: 0
+	padding-bottom: 56%
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	overflow: hidden
+
+.img-bg
+	position: absolute
+	+fullsize
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	+transition(1s)
+
+.lightened
+	+grayscale
+	background-color: rgba(255,255,255,0.75)
+	background-blend-mode: lighten
+
+.darken
+	+grayscale
+	background-color: rgba(0,0,0,0.25)
+	background-blend-mode: darken
+
+
+.section-indent
+	padding-top: 40px
+
+.button
+	background-color: transparent
+	border: 1px dotted $light-blue-color
+	padding: 16px 30px
+	text-transform: uppercase
+	font-family: AD
+	letter-spacing: 2px
+	display: inline-block
+	position: relative
+	cursor: pointer
+	color: $red-color
+	.inner-border
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 3px
+		border: 2px solid $light-blue-color
+	&.red-btn
+		border: 1px dotted transparent
+		background-color: $red-color
+		color: $white-color
+		.inner-border
+			border: 2px solid $white-color
+	&.paly-btn
+		padding: 8px
+		border: 1px dotted $white-color
+		svg
+			width: 33px
+			height: 29px
+			padding: 5px
+		.inner-border
+			border: 2px solid $white-color
+
+	&.white
+		color: $white-color
+		border: 1px dotted $white-color
+		.inner-border
+			border: 2px solid $white-color
+
+.red-line
+	width: 46px
+	height: 2px
+	margin: 20px auto
+	background-color: $red-color
+	&.big
+		height: 4px
+		width: 70px
+	&.left
+		margin: 20px 0
+
+
+.font-ad
+	font-family: AD
+
+.big-title
+	font-size: 36px
+	font-family: AD
+	letter-spacing: 2px
+	line-height: 1.2
+	color: $red-color
+	text-transform: uppercase
+	&.black
+		color: $black-color
+
+
+
+.buttons-box
+	.next-btn, .prev-btn
+		cursor: pointer
+	
+
+.video-wrap
+	position: relative
+	cursor: pointer
+	.video-cover
+		+fullsize
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		&.hidden
+			display: none
+	.palay-btn
+		width: 50px 
+		height: 50px
+		+xy-align
+
+
+.white-bg
+	background-color: $white-color
+
+
+.social-box
+	svg, a
+		display: block
+		width: 40px
+		height: 40px
+		&:hover
+			.st13, .st12, .st15
+				fill: $red-color
+
+
+.mix-container .mix
+	display: inline-block
+.mix-container .mix.display-none
+	display: none

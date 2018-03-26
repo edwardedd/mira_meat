@@ -1,0 +1,69 @@
+.footer-container
+	text-align: center
+	background-color: #222f35
+	color: $white-color
+	.footer-logo
+		svg
+			width: 250px
+			height: 250px
+
+	.girizontal-svg
+		svg
+			height: 25px
+			margin: 30px 0
+
+	li.nav
+		+breakpoint(medium down)
+			margin-bottom: 15px
+
+	.footer-contacts
+		padding: 40px 0 100px
+		li
+			display: inline-block
+			padding: 0 20px
+			font-weight: 600
+			&:after
+				content: ""
+				display: inline-block
+				width: 5px
+				height: 5px
+				right: -20px
+				background-color: $light-blue-color
+				+rotate(45deg)
+				position: relative
+				vertical-align: middle
+
+			&:last-child
+				&:after
+					display: none
+
+			+breakpoint(small only)
+				display: block
+				margin-bottom: 15px
+				&:after
+					display: none
+			
+			
+	.bottom-footer
+		padding-bottom: 50px
+		a, p
+			color: $light-blue-color
+
+		svg
+			width: 20px
+			height: 20px
+			margin-right: 10px
+			vertical-align: bottom
+			*
+				fill: $light-blue-color
+
+		a
+			&:hover
+				color: $white-color
+				svg
+					*
+						fill: $white-color
+
+		+breakpoint(small only)
+			a, p
+				margin: 10px

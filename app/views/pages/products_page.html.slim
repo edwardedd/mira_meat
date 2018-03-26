@@ -1,0 +1,112 @@
+.products-page.white-bg
+	.page-inner-banner-wrap
+		.img-bg style="background-image: url(#{asset_path('photo/Main-Photo-toning-1.jpg')})"
+		.head-title.font-ad Продукція
+	
+	.filter-btn-box
+		.row
+			.columns.medium-8
+				.one-filter-btn.filter.active data-filter="all" всі
+				.one-filter-btn.filter data-filter=".category-a" свинина
+				.one-filter-btn.filter data-filter=".category-b" яловичина
+				.one-filter-btn.filter data-filter=".category-c" курятина
+				.one-filter-btn.filter data-filter=".category-d" індичатина
+		 
+
+			.columns.medium-4
+				select.FilterSelect
+					option value="all" Вся прокукція
+					option value=".inport" Імпорт
+					option value=".export" Експорт
+				
+				select.SortSelect
+					option value="myorder:asc" data-sort="order:asc" Ціна за зростанням
+					option value="myorder:desc" data-sort="order:desc" Ціна за спаданням
+	.products-container
+		.row.columns-left.mix-container
+			.large-3.medium-4.columns.category-a.mix.inport data-order="21"
+				.one-product.popup-btn data-btn-attr="order-form"
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box Україна | mira meat
+						.prise.font-ad 60 грн
+					.title Шия
+			
+			.large-3.medium-4.columns.category-b.mix.inport data-order="22"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box польша
+						.prise.font-ad 60 грн
+					.title Шия
+
+
+			.large-3.medium-4.columns.category-c.mix.export data-order="30"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box китай
+						.prise.font-ad 60 грн
+					.title Шия
+
+			.large-3.medium-4.columns.category-d.mix.export data-order="50"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box корея
+						.prise.font-ad 60 грн
+					.title Шия
+
+
+			.large-3.medium-4.columns.category-b.mix.export data-order="82"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box США
+						.prise.font-ad 60 грн
+					.title Шия
+			
+			.large-3.medium-4.columns.category-b.mix.export data-order="12"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box Британія
+						.prise.font-ad 60 грн
+					.title Шия
+
+
+			.large-3.medium-4.columns.category-a.mix.export data-order="2"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box Гавайські острова
+						.prise.font-ad 60 грн
+					.title Шия
+
+			.large-3.medium-4.columns.category-d.mix.export data-order="220"
+				.one-product
+					.inner-container
+						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
+						.apt APT.6573331
+						.manufacturer-box Бермудський трикутник
+						.prise.font-ad 60 грн
+					.title Шия
+
+
+	.padination-box
+		= inline_svg "svg/ic_keyboard_arrow_left_black_24px.svg"
+		span.one 1
+		span.one.active 2
+		span.one 3
+		span.one 4
+		span.one 5
+		= inline_svg "svg/ic_keyboard_arrow_right_black_24px.svg"
+
+= render "partners_slider_wrap.html.slim"

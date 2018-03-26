@@ -1,0 +1,146 @@
+.main-banner
+	position: relative
+	height: 100vh
+	.buttons-box
+		+y-align
+		z-index: 10
+		width: 100%
+		display: none
+		.next-btn, .prev-btn
+			width: 30px	
+			height: 30px
+			display: inline-block
+			position: absolute
+		.next-btn
+			right: 30px
+		.prev-btn
+			left: 30px
+		+breakpoint(xxlarge up)
+			display: block
+	.slider
+		+fullsize
+	.slick-slide
+		position: relative
+		height: 100vh
+	.slick-dots
+		position: absolute
+		bottom: 30px
+		left: 15px
+		li
+			display: inline-block
+			width: 12px
+			height: 12px
+			border: 1px solid $white-color
+			+rotate(45deg)
+			margin: 10px
+			cursor: pointer
+			button
+				display: none
+			&.slick-active
+				background-color: $white-color
+
+	.content-banner
+		+y-align
+		top: 50%
+		width: 100%
+		color: $white-color
+		.sub-title-banner
+			font-size: 57px
+			text-transform: uppercase
+			letter-spacing: 6px
+			margin-bottom: 20px
+
+		.title
+			font-size: 175px
+			position: relative
+			padding-left: 30px
+			text-transform: uppercase
+			line-height: 0.8
+			&:before, &:after
+				content: ""
+				position: absolute
+				background-size: cover
+				background-position: center
+				background-repeat: no-repeat
+				display: inline-block
+				width: 14px
+				height: 100%
+				top: 0
+				bottom: 0
+				+y-align
+				+translate(0,-57%)
+			&:before
+				background-image: asset_url('svg/MM-bracket-left-v1.svg')
+				background-position: left
+				left: 0
+			&:after
+				background-image: asset_url('svg/MM-bracket-right-v1.svg')
+				right: 160px
+				background-position: right
+
+		.red-line
+			margin: 25px 0
+
+		p
+			font-size: 18px
+			margin-bottom: 50px
+
+		.paly-btn
+			margin-left: 20px
+	
+	+breakpoint(xxlarge up)
+		.slick-dots
+			left: 30px
+		.content-banner
+			top: 40%
+			.sub-title-banner
+				font-size: 60px
+
+			.title
+				font-size: 230px
+				line-height: 0.7
+				&:before, &:after
+					width: 20px
+				&:after
+					right: 80px
+
+	@media only screen and (min-width: 640px) and (max-width: 1024px)
+		height: 65vh
+		.slick-slide
+			height: 65vh
+
+	+breakpoint(large only)
+		.content-banner
+			.title
+				&:after
+					right: 30px
+
+	+breakpoint(medium down)
+		.content-banner
+			.sub-title-banner
+				font-size: 40px
+			.title
+				font-size: 125px
+				&:before, &:after
+					width: 11px
+				&:after
+					right: 135px
+
+	+breakpoint(small only)
+		.content-banner
+			.title
+				&:after
+					right: 70px
+
+
+
+
+.page-inner-banner-wrap
+	height: 60vh
+	position: relative
+	.head-title
+		text-transform: uppercase
+		color: $white-color
+		+xy-align
+		font-size: 80px
+		letter-spacing: 2px

@@ -1,0 +1,279 @@
+p
+	font-family: 'Lato', sans-serif
+	font-weight: 400
+	font-size: 14px
+	line-height: 1.4
+
+.title-svg-box
+	position: relative
+	font-size: 21px
+	font-weight: 800
+	letter-spacing: 2px
+	text-transform: uppercase
+	text-align: center
+	margin-top: 50px
+	&:before
+		content: ""
+		background-image: asset_url('svg/MM-symbol-1-v1.svg')
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		display: inline-block
+		width: 25px
+		height: 25px
+		+x-align
+		top: -35px
+
+
+.title-svg-line-box
+	position: relative
+	font-size: 24px
+	text-transform: uppercase
+	color: $red-color
+	margin-top: 50px
+	letter-spacing: 4px
+	font-family: AD
+	&:before
+		content: ""
+		background-image: asset_url('svg/MM-symbol-2-v1.svg')
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		display: inline-block
+		width: 120px
+		height: 10px
+		+x-align
+		top: -25px
+
+	&.big
+		font-size: 60px
+
+	&.white
+		color: $white-color
+		&:before
+			content: ""
+			background-image: asset_url('svg/MM-symbol-2a-v1.svg')
+
+
+.one-container-dotted
+	position: relative
+	+transition(.3s)
+	&:before
+		content: ""
+		position: absolute
+		left: 15px
+		right: 15px
+		top: 15px
+		bottom: 15px
+		border: 1px dotted $light-blue-color
+		z-index: 5
+    
+
+	&:hover
+		&:before
+			border: 1px solid $white-color
+	&.white-dotted
+		&:before
+			border: 1px dotted $white-color
+		&:hover
+			&:before
+				border: 1px solid $white-color
+	&.no-hover
+		&:hover
+			&:before
+				border: 1px dotted $white-color
+
+.news-one
+	height: 200px
+	overflow: hidden
+	border-bottom: 1px solid $light-blue-color
+	margin-bottom: 50px
+	display: block
+	position: relative
+	.date
+		font-size: 12px
+		text-transform: uppercase
+	.big-title
+		margin: 15px 0 20px
+		line-height: 0.9
+		max-height: 64px
+		overflow: hidden
+	p
+		margin-bottom: 20px
+		max-height: 60px
+		overflow: hidden
+
+	.button
+		position: absolute
+		bottom: 20px
+
+	&.big
+		height: 300px
+		border-top: 1px solid $light-blue-color
+		.inner-container
+			overflow: hidden
+			max-height: 215px
+		.date
+			margin-top: 20px
+		.big-title
+			font-size: 44px
+			max-height: 75px
+		p
+			font-size: 18px
+			min-height: 100px
+
+.partners-wrap
+	// padding: 50px 0
+	background-color: $red-color
+	li
+		position: relative
+		padding: 50px 
+		&:after
+			content: ""
+			display: block
+			+y-align
+			right: -20px
+			height: 40px
+			border-right: 1px dotted $white-color
+		svg
+			path
+				fill: $white-color !important
+
+		+breakpoint(small only)
+			padding: 30px
+			&:after
+				right: 0
+				height: 20px
+
+
+li.nav
+	display: inline-block
+	padding: 0 10px
+	border-right: 1px solid $light-blue-color
+	&:last-child
+		border-right: 1px solid transparent
+	a
+		text-transform: uppercase
+		color: $white
+		font-weight: 600
+
+
+.logo
+	width: 130px
+	line-height: 1
+	svg
+		width: 100%
+
+
+.contact-us-box
+	.title
+		font-size: 12px
+		text-transform: uppercase
+		margin: 50px 0 10px
+	a
+		font-size: 18px
+		font-weight: 600
+		display: block
+		margin-bottom: 20px
+	.button
+		margin-top: 40px
+
+	&.black
+		.title
+			color: $light-blue-color
+			font-size: 10px
+			margin: 25px 0 10px
+
+		.mail
+			color: $red-color
+		p
+			font-weight: 600
+		.social-box
+			border-top: 1px solid $light-blue-color
+			margin-top: 50px
+			.title
+				margin: 15px 0 10px
+			.social
+				display: inline-block
+				width: 40px
+				height: 40px
+				margin-right: 10px
+
+.page-title
+	padding: 150px 0 70px
+	font-size: 72px
+	text-transform: uppercase
+	letter-spacing: 2px
+	font-family: AD
+	text-align: center
+
+
+.padination-box
+	padding: 50px 0 80px
+	text-align: center
+	.one
+		color: $black-color
+		padding: 10px 15px
+		font-weight: 600
+		&.active, &:hover
+			background-color: $black-color
+			color: $white-color
+
+	.one, svg
+		vertical-align: middle
+		cursor: pointer
+
+///  C O N T AC T    U S   P A G E
+
+.contact-us-page
+	.contact-container
+		display: flex
+		align-items: stretch
+
+	.container-img
+		width: 65%
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		position: relative
+	.contact-us-box
+		width: 35%
+		margin-left: 100px
+	.head-title
+		text-transform: uppercase
+		letter-spacing: 1px
+		font-weight: 600
+	.red-line
+		margin: 20px 0 0 0
+
+	.svg-line
+		width: 400px
+		height: 50px
+		max-width: 90%
+		margin: auto
+		padding: 100px 0 70px
+		svg
+			path
+				fill: $black-color !important
+
+
+	.form-box
+		position: relative
+		padding-bottom: 200px
+		.big-title
+			text-align: center
+
+		.button
+			+x-align
+			bottom: 130px
+
+	+breakpoint(medium only)
+		.contact-us-box
+			margin-left: 30px
+	+breakpoint(small only)
+		.contact-container
+			display: block
+		.container-img, .contact-us-box
+			width: 100%
+		.contact-us-box
+			margin-left: 0

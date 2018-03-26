@@ -1,0 +1,59 @@
+.contact-us-page.white-bg
+	.page-title контакти
+	.row
+		.columns
+			.contact-container
+				.container-img
+					.img-bg style="background-image: url(#{asset_path('photo/sample-1.jpg')})"
+
+				.contact-us-box.black
+					.head-title раді вас бачити
+					.red-line
+					.title.white телефон
+					a href="tel:+38 (097) 249 17 77" +38 (097) 249 17 77
+					a href="tel:+38 (032) 523 17 00" +38 (032) 523 17 00
+					.title.white електронна скринька
+					a.mail href="milito:expoaps@gmail.com" expoaps@gmail.com
+					.title.white адреса
+					p Вул.Грушевського 77,с.Надичі,Жовківський район,Львівська облать,Україна
+					.button
+						.inner-border
+						|глянути на карті
+
+					.social-box
+						.title ми в соц.мережах
+						a.social href="" = inline_svg "svg/mm-button-social-youtube.svg"
+						a.social href="" = inline_svg "svg/mm-button-social-tw.svg"
+						a.social href="" = inline_svg "svg/mm-button-social-face.svg"
+
+	.svg-line = inline_svg "svg/MM-symbol-3-v1.svg"
+
+	
+			
+			
+	.form-box
+		.row
+			.large-8.columns.large-centered
+				.big-title.black напишіть нам
+				form
+					.medium-6.columns
+						.input-field
+							input#name name="firstname"
+							label Імʼя
+						.input-field
+							input#phone name="phone"
+							label Телефон
+						.input-field
+							input#mail name="mail"
+							label Ел.скринька
+
+					.medium-6.columns
+						.input-field
+							textarea#textarea rows="10"
+							label.textarea ваші побажання...
+
+					button.button.red-btn
+						| замовити
+						.inner-border
+
+= render "partners_slider_wrap"

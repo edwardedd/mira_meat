@@ -1,0 +1,48 @@
+form
+	// position: relative
+	padding: 30px
+.input-field
+	position: relative
+	margin: 20px 0
+	input, textarea, select
+		font-size: 14px
+		color: $grey600
+		display: block
+		padding: 10px 20px
+		width: 100%
+		border: 1px solid #c0bebb
+		outline: none
+		background-color: transparent
+		+medium
+		&:focus
+			outline: none
+	select
+		color: $brown300
+		padding-left: 15px
+	label
+		font-size: 12px
+		color: $brown300
+		// text-transform: uppercase
+		letter-spacing: 2px
+		pointer-events: none
+		+y-align
+		left: 20px
+		&.textarea
+			top: 23px
+
+		// &.placeholder
+		// 	font-size: 16px
+		// 	position: absolute
+		// 	pointer-events: none
+		// 	top: 20px
+		// 	left: 20px
+		// 	font-weight: normal
+		// 	transition: all 0.2s ease
+		// 	text-transform: none
+		// 	span
+		// 		color: red
+
+	input:focus ~ label, input.used ~ label, textarea:focus ~ label, textarea.used ~ label
+		color: white
+		top: -2px
+		font-size: 0em

@@ -1,0 +1,13 @@
+Rails.application.routes.draw do
+  root to: "pages#index"
+
+  controller :pages do
+    get "about-us", action: "about_us"
+    get "news-page", action: "news_page"
+    get "one-news-page", action: "one_news_page"
+    get "contact-us-page", action: "contact_us_page"
+    get "products-page", action: "products_page"
+  end
+
+  match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]
+end

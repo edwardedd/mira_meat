@@ -1,0 +1,25 @@
+.main-banner.slider-container
+	.buttons-box
+		.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
+		.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
+	ul.slider
+		li 
+			.img-bg style="background-image: url(#{asset_path('photo/banner-1.jpg')})"
+		li 
+			.img-bg style="background-image: url(#{asset_path('photo/sample-2.jpg')})"
+		li 
+			.img-bg style="background-image: url(#{asset_path('photo/sample-7.jpg')})"
+
+	.content-banner
+		.row
+			.medium-7.large-5.columns
+				.sub-title-banner.font-ad ми виготовляємо
+				.title.font-ad мʼясо
+				.red-line.big
+				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis laborum obcaecati doloremque nulla deleniti voluptatem
+				.button.red-btn.dib
+					|замовити
+					.inner-border
+				.button.paly-btn.dib 
+					= inline_svg "svg/MM-arrow-right-v1.svg"
+					.inner-border
