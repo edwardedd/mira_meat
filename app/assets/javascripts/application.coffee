@@ -7,6 +7,7 @@
 #     P L U G I N S
 
 #= require plugins/jquery-easing
+#= require plugins/jquery.scrolldelta
 #= require plugins/clickout
 #= require plugins/form
 #= require plugins/slick.min

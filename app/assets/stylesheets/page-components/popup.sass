@@ -57,4 +57,53 @@
 
 
 .product-popup
+	padding: 0
 	width: 80%
+	height: 50vh
+	.left-part, .right-part
+		display: inline-block
+		vertical-align: top
+		position: relative
+		.img-bg
+			height: 50vh
+			background-size: contain
+	.left-part
+		width: 40%
+		background-color: white
+		height: 50vh
+	.right-part
+		padding: 50px
+		width: 60%
+		.sub-title
+			text-transform: uppercase
+
+		.info-block
+			border-top: 1px dotted $black-color
+			border-bottom: 1px dotted $black-color
+			margin: 20px 0
+			padding: 20px 0
+			&.no-border
+				border-top: none
+				border-bottom: none
+				margin: 0
+			.one-info-block
+				padding: 10px 0
+				width: 33%
+				display: inline-block
+				vertical-align: top
+
+	.lable
+		font-size: 10px
+		text-transform: uppercase
+		color: $light-blue-color
+		padding-bottom: 10px
+	.value 
+		color: $black-color
+		font-weight: 700
+		font-size: 18px
+		padding-bottom: 5px
+	.sub-value
+		font-size: 14px
+
+	.button
+		margin-top: 40px

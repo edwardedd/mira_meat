@@ -1,44 +1,23 @@
 .main-banner
 	position: relative
 	height: 100vh
-	.buttons-box
-		+y-align
-		z-index: 10
-		width: 100%
-		display: none
-		.next-btn, .prev-btn
-			width: 30px	
-			height: 30px
-			display: inline-block
-			position: absolute
-		.next-btn
-			right: 30px
-		.prev-btn
-			left: 30px
-		+breakpoint(xxlarge up)
-			display: block
+	
 	.slider
 		+fullsize
 	.slick-slide
 		position: relative
 		height: 100vh
 	.slick-dots
-		position: absolute
 		bottom: 30px
 		left: 15px
 		li
-			display: inline-block
-			width: 12px
-			height: 12px
 			border: 1px solid $white-color
-			+rotate(45deg)
-			margin: 10px
-			cursor: pointer
-			button
-				display: none
 			&.slick-active
 				background-color: $white-color
-
+	.buttons-box
+		display: none
+		+breakpoint(xxlarge up)
+			display: block
 	.content-banner
 		+y-align
 		top: 50%
@@ -144,3 +123,35 @@
 		+xy-align
 		font-size: 80px
 		letter-spacing: 2px
+
+
+
+.buttons-box
+	+y-align
+	z-index: 10
+	width: 100%
+	.next-btn, .prev-btn
+		width: 30px	
+		height: 30px
+		display: inline-block
+		position: absolute
+	.next-btn
+		right: 30px
+	.prev-btn
+		left: 30px
+	+breakpoint(small only)
+		display: none
+
+
+.slick-dots
+	position: absolute
+	li
+		display: inline-block
+		width: 12px
+		height: 12px
+		+rotate(45deg)
+		margin: 10px
+		cursor: pointer
+		button
+			display: none
+		

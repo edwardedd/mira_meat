@@ -1,0 +1,44 @@
+.retail-page.white-bg
+	.page-inner-banner-wrap
+		.img-bg style="background-image: url(#{asset_path('photo/mm-retail-banner-img-1.jpg')})"
+		.head-title.font-ad Роздріб
+
+	.about-retail-wrap.pt
+		.row
+			.columns
+				.big-title.black основна галузь, якою займається компанія "агропобутсервіс" є імпорт м'ясної продукції.
+				.red-line
+				p Адже ніхто інший, як кінцевий споживач, ее зможе оцінити справжню високу якість нашої продукції
+				.big-title
+					| для цього ми почали
+					.line
+	
+	.row
+		.columns
+			.slider-container
+				.buttons-box
+					.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
+					.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
+				ul.slider
+					li 
+						.img-bg style="background-image: url(#{asset_path('photo/banner-1.jpg')})"
+						.content-banner
+							.big-title.white Поставляти нашу продукцію у невеликі м'ясопереробні підприємства
+							p де із дотриманням сімейних традицій виготовляють неймовірно смачні м'ясні вироби
+					li 
+						.img-bg style="background-image: url(#{asset_path('photo/sample-2.jpg')})"
+						.content-banner
+							.big-title.white Поставляти нашу продукцію у невеликі м'ясопереробні підприємства
+							p де із дотриманням сімейних традицій виготовляють неймовірно смачні м'ясні вироби
+					li 
+						.img-bg style="background-image: url(#{asset_path('photo/sample-7.jpg')})"
+						.content-banner
+							.big-title.white Поставляти нашу продукцію у невеликі м'ясопереробні підприємства
+							p де із дотриманням сімейних традицій виготовляють неймовірно смачні м'ясні вироби
+					li 
+						.img-bg style="background-image: url(#{asset_path('photo/mm-whosale-banner-img-3.jpg')})"
+						.content-banner
+							.big-title.white Поставляти нашу продукцію у невеликі м'ясопереробні підприємства
+							p де із дотриманням сімейних традицій виготовляють неймовірно смачні м'ясні вироби
+
+= render "partners_slider_wrap"

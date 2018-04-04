@@ -1,6 +1,6 @@
 .header-container
-	// position: fixed
-	position: absolute
+	position: fixed
+	// position: absolute
 	padding: 20px 15px
 	width: 100%
 	background: transparent
@@ -12,12 +12,10 @@
 	justify-content: space-between
 	+transition-property(transform)
 	+transition-duration(1s)
-	// +translate(0,-100%)
+	+translate(0,-100%)
 	z-index: 11
-	// &.scrolled, &.visible
-	//   +translate(0,0)
-	// @media #{$small-only}
-	// @media #{$xxlarge-up}
+	&.scrolled, &.visible
+		+translate(0,0)
 	&.scrolled
 		background-color: $black-color
 	+breakpoint(xxlarge up)

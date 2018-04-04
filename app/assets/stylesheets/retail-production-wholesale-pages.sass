@@ -1,0 +1,168 @@
+.retail-page, .production-page
+	.about-retail-wrap, .about-production-wrap
+		padding: 80px 0 100px
+		text-align: center
+		width: 950px
+		max-width: 100%
+		margin: auto
+		p
+			font-size: 18px
+			font-weight: 600
+			padding-bottom: 110px
+		.big-title
+			position: relative
+			.line
+				top: 80px
+				+x-align
+				width: 1px
+				z-index: 1
+				height: 90px
+				background-color: black
+	.slider-container
+		position: relative
+		margin-bottom: 200px
+
+		.content-banner
+			color: $white-color
+			+x-align
+			bottom: 50px
+			text-align: center
+			p
+				font-weight: 600
+
+		.slick-slide
+			height: 60vh
+			position: relative
+			+breakpoint(xlarge only)
+				height: 80vh
+		.slick-dots
+			+x-align
+			bottom: -50px
+			li
+				border: 1px solid $black-color
+				&.slick-active
+					background-color: $black-color
+
+		+breakpoint(small only)
+			margin-bottom: 100px
+			.content-banner
+				width: 95%
+			.slick-slide
+				height: 90vh
+			.buttons-box
+				display: none
+
+
+
+				///// P R O D U C T I O N    P A G E /////
+
+
+.production-page
+	.about-production-wrap
+		width: 640px
+		p
+			padding-bottom: 0
+	.about-technology-wrap
+		.img-content-container
+			color: $white-color
+			background-color: $red-color
+			padding: 40px
+			text-align: left
+			width: 900px
+			max-width: 90%
+			margin: -200px auto 100px
+			position: relative
+			z-index: 10
+			min-height: 300px
+			+breakpoint(small only)
+				margin: 50px auto
+
+	.respect-client-wrap
+		background-color: $black-color
+		.content-box
+			text-align: center
+			padding: 80px 0
+			margin: auto
+			width: 900px
+			max-width: 100%
+			color: $white-color
+			.big-title
+				font-size: 68px
+			p
+				font-size: 18px
+				font-weight: 600
+
+			.button
+				margin-top: 80px
+
+
+
+				///// W H O L E S A L E   P A G E /////
+
+
+.wholesale-page
+	.about-wholesale-wrap
+		padding: 100px 0
+		.title
+			font-size: 18px
+			font-weight: 600
+		p
+			padding: 20px 0 30px
+
+
+		.quality-box
+			border-top: 1px dotted $black-color
+			border-bottom: 1px dotted $black-color
+			padding: 20px 0
+
+
+			.one-box
+				width: 33%
+				text-align: center
+				display: inline-block
+				vertical-align: middle
+				// padding: 0 20px
+				svg
+					width: 30px
+					height: 30px
+					margin-bottom: 10px
+				.title
+					font-size: 14px
+
+		+breakpoint(small only)
+			.big-title
+				font-size: 26px
+			.quality-box
+				.one-box
+					display: block
+					width: 100%
+					margin-bottom: 20px
+
+	.img-container
+		height: 55vh
+		padding-bottom: 0
+		+breakpoint(xlarge only)
+			height: 83vh
+		+breakpoint(small only)
+			height: 90vh
+		.content-box
+			position: relative
+			background-color: $red-color
+			min-height: 500px
+			padding: 50px
+			margin-top: 50px
+			color: $white-color
+			.title
+				padding-bottom: 20px
+				font-size: 18px
+				font-weight: 600
+				line-height: 1.2
+			p
+				max-height: 195px
+				overflow: hidden
+			
+			.button
+				position: absolute
+				bottom: 50px
+				left: 50px
+				z-index: 1

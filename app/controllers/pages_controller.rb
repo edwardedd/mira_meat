@@ -21,4 +21,13 @@ class PagesController < ApplicationController
   def products_page
   end
 
+  def retail_page
+  end
+
+  def production_page
+  end
+
+  def wholesale_page
+  end
+  
 end
