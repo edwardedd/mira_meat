@@ -277,3 +277,54 @@ li.nav
 			width: 100%
 		.contact-us-box
 			margin-left: 0
+
+
+
+			/// E R R O R   P A G E ///
+
+
+.error-page
+	background-color: black
+	position: relative
+	height: 100vh
+	text-align: center
+	color: $white-color
+	overflow: hidden
+	.content-container
+		+xy-align
+		width: 100%
+		.big-title
+			+breakpoint(medium up)
+				font-size: 54px
+		.img-box
+			height: 380px
+			width: 380px
+			position: relative
+			margin: 0 auto 40px
+			&:before, &:after
+				content: "4"
+				+y-align
+				font-size: 350px
+				color: $red-color
+				font-family: AD
+
+			&:before
+				left: -90px
+
+			&:after
+				right: -90px
+
+		
+		+breakpoint(small only)
+			.img-box
+				height: 200px
+				width: 200px
+				&:before, &:after
+					font-size: 185px
+
+				&:before
+					left: -60px
+
+				&:after
+					right: -60px
+		
