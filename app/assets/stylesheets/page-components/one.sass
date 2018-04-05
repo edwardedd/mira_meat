@@ -33,6 +33,7 @@ p
 	margin-top: 50px
 	letter-spacing: 4px
 	font-family: AD
+	+transition(.3s)
 	&:before
 		content: ""
 		background-image: asset_url('svg/MM-symbol-2-v1.svg')
@@ -52,7 +53,7 @@ p
 		color: $white-color
 		&:before
 			content: ""
-			top: 40px
+			top: -40px
 			width: 180px
 			height: 15px	
 			background-image: asset_url('svg/MM-symbol-2a-v1.svg')
@@ -93,6 +94,7 @@ p
 	margin-bottom: 50px
 	display: block
 	position: relative
+
 	.date
 		font-size: 12px
 		text-transform: uppercase
@@ -101,6 +103,7 @@ p
 		line-height: 0.9
 		max-height: 64px
 		overflow: hidden
+		+transition(.3s)
 	p
 		margin-bottom: 20px
 		max-height: 60px
@@ -124,6 +127,10 @@ p
 		p
 			font-size: 18px
 			min-height: 100px
+
+	&:hover
+		.big-title
+			letter-spacing: 3px
 
 .partners-wrap
 	// padding: 50px 0
@@ -218,9 +225,13 @@ li.nav
 		color: $black-color
 		padding: 10px 15px
 		font-weight: 600
-		&.active, &:hover
+		&.active
 			background-color: $black-color
 			color: $white-color
+		&:hover
+			color: $white-color
+			background-color: $red-color
+
 
 	.one, svg
 		vertical-align: middle
