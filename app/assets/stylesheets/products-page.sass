@@ -24,9 +24,25 @@
 			cursor: pointer
 			width: calc(50% - 50px)
 			border-bottom: 1px dotted $light-blue-color
-			padding: 13px 0 5px
+			padding: 14px 0 5px
 			&:focus 
 				outline: none
+
+		+breakpoint(small only)
+			.one-filter-btn, select
+				display: block
+			.one-filter-btn
+				border-right: 0
+				border-bottom: 1px dotted $light-blue-color
+				&:first-child
+					border-left: 0
+
+			select
+				margin-left: 0
+				width: 100%
+				line-height: 2
+				padding: 22px 0 5px
+
 
 	.products-container
 		.one-product
