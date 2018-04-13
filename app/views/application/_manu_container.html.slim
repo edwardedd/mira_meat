@@ -21,19 +21,24 @@
 							a href=contact_us_page_path контакти
 					.contact-us-box
 						.title.white телефон
-						a href="tel:+38 (097) 249 17 77" +38 (097) 249 17 77
-						a href="tel:+38 (032) 523 17 00" +38 (032) 523 17 00
+						a href="tel:#{@contact.first_number}" #{@contact.first_number}
+						-if @contact.second_number
+							a href="tel:#{@contact.second_number}" #{@contact.second_number}
+						-if @contact.third_number
+							a href="tel:#{@contact.third_number}" #{@contact.third_number}
 						.title.white електронна скринька
-						a href="milito:expoaps@gmail.com" expoaps@gmail.com
+						a href="milito:#{@contact.first_email}" #{@contact.first_email}
+						-if @contact.second_email
+							a href="milito:#{@contact.second_email}" #{@contact.second_email}
 						.title.white адреса
-						p Вул.Грушевського 77,с.Надичі,Жовківський район,Львівська облать,Україна
+						p = @contact.first_adress
 						.button.white.order-popup-btn
 							.inner-border
 							|замовити
-							
+
 	.social-container
 		.close-button = inline_svg "svg/MM-menu-close-v1.svg"
 		.social-box
-			a href="" = inline_svg "svg/mm-button-social-youtube.svg"
-			a href="" = inline_svg "svg/mm-button-social-tw.svg"
-			a href="" = inline_svg "svg/mm-button-social-face.svg"
+			a href="#{@contact.youtube}" = inline_svg "svg/mm-button-social-youtube.svg"
+			a href="#{@contact.twitter}" = inline_svg "svg/mm-button-social-tw.svg"
+			a href="#{@contact.facebook}" = inline_svg "svg/mm-button-social-face.svg"

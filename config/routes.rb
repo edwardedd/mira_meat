@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: "pages#index"
 
   controller :pages do
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
     get "retail-page", action: "retail_page"
     get "production-page", action: "production_page"
     get "wholesale-page", action: "wholesale_page"
+    post "consultation", action: "consultation"
   end
 
   match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]
