@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412123503) do
+ActiveRecord::Schema.define(version: 20180413095451) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -89,6 +89,9 @@ ActiveRecord::Schema.define(version: 20180412123503) do
     t.string  "first_title"
     t.string  "second_title"
     t.boolean "show"
+  end
+
+  create_table "sertificates", force: :cascade do |t|
   end
 
   create_table "users", force: :cascade do |t|
