@@ -1,16 +1,23 @@
 class PagesController < ApplicationController
    before_filter :info
   def index
+    @article = Article.limit(5).show
   end
 
   def about_us
+    @about_us = Aboutus.first
+    @serticate = Sertificate.show
   end
 
   def news_page
+    @article = Article.all.show
   	@black_header = true
   end
 
   def one_news_page
+    @article = Article.find(params[:id])
+    @next = Article.where(["id > ?", params[:id]]).show.first
+    @previous = Article.where(["id < ?", params[:id]]).show.last
   	@black_header = true
   end
 

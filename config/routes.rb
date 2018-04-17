@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: "pages#index"
@@ -6,7 +7,7 @@ Rails.application.routes.draw do
   controller :pages do
     get "about-us", action: "about_us"
     get "news-page", action: "news_page"
-    get "one-news-page", action: "one_news_page"
+    get "news-page/:id", action: "one_news_page", as: "one_news_page"
     get "contact-us-page", action: "contact_us_page"
     get "products-page", action: "products_page"
     get "retail-page", action: "retail_page"

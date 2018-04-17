@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180412123503) do
+ActiveRecord::Schema.define(version: 20180417150414) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -26,7 +26,33 @@ ActiveRecord::Schema.define(version: 20180412123503) do
     t.text   "third_description_right"
     t.text   "frase"
     t.text   "history_text"
+    t.string "video_cover"
   end
+
+  create_table "articles", force: :cascade do |t|
+    t.string  "title"
+    t.date    "date"
+    t.string  "second_title"
+    t.string  "main_image"
+    t.string  "second_image"
+    t.text    "first_description"
+    t.text    "second_description"
+    t.text    "photo_description"
+    t.boolean "show"
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
+
+  add_index "ckeditor_assets", ["type"], name: "index_ckeditor_assets_on_type"
 
   create_table "contacts", force: :cascade do |t|
     t.string "first_number"
@@ -48,6 +74,14 @@ ActiveRecord::Schema.define(version: 20180412123503) do
   end
 
   create_table "headersliders", force: :cascade do |t|
+    t.string  "image"
+    t.boolean "show"
+  end
+
+  create_table "histories", force: :cascade do |t|
+    t.string  "title"
+    t.string  "year"
+    t.text    "description"
     t.string  "image"
     t.boolean "show"
   end
@@ -88,6 +122,12 @@ ActiveRecord::Schema.define(version: 20180412123503) do
     t.string  "image"
     t.string  "first_title"
     t.string  "second_title"
+    t.boolean "show"
+  end
+
+  create_table "sertificates", force: :cascade do |t|
+    t.string  "name"
+    t.string  "image"
     t.boolean "show"
   end
 

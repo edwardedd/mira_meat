@@ -2,35 +2,35 @@
 	.page-title Новини
 	.row
 		.medium-6.columns
-			.img-box style="background-image: url(#{asset_path('photo/sample-8.jpg')})"
+			.img-box style="background-image: url(#{@article.first.main_image})"
 		.medium-5.columns
-			a.news-one.big href=one_news_page_path
+			a.news-one.big href=one_news_page_path(@article.first)
 				.inner-container
-					.date 21 листопада, 2017
-					.big-title лідер на ринку на ринку 
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+					.date =@article.first.date
+					.big-title =@article.first.title
+					p  =@article.first.second_title
 					.button
 						.inner-border
 						| читати
 
 	.all-news-wrap
 		.row.columns-left
-			- 8.times do |i|
+			- @article.drop(1).each do |article|
 				.medium-6.large-4.columns
-					a.news-one href=one_news_page_path
-						.date 21 листопада, 2017
-						.big-title лідер на ринку на ринку 
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+					a.news-one href=one_news_page_path(article)
+						.date =article.date
+						.big-title =article.title
+						p  =article.second_title
 
 
-	.padination-box
-		= inline_svg "svg/ic_keyboard_arrow_left_black_24px.svg"
-		span.one 1
-		span.one.active 2
-		span.one 3
-		span.one 4
-		span.one 5
-		= inline_svg "svg/ic_keyboard_arrow_right_black_24px.svg"
+	/ .padination-box
+	/ 	= inline_svg "svg/ic_keyboard_arrow_left_black_24px.svg"
+	/ 	span.one 1
+	/ 	span.one.active 2
+	/ 	span.one 3
+	/ 	span.one 4
+	/ 	span.one 5
+	/ 	= inline_svg "svg/ic_keyboard_arrow_right_black_24px.svg"
 
 
 = render "partners_slider_wrap"
