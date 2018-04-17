@@ -28,6 +28,11 @@ $(document).on 'click', '.popup-btn', ()->
   $('body').addClass('opened-popup')
   $('.product-popup[data-form-attr="'+attr+'"]').addClass('visible')
   
+$(document).on 'click', '.popup-work-btn', ()-> 
+
+  $('.info-work-popup').addClass('visible')
+  $('body').addClass('opened-popup')
+
 
 $document.on 'click', ->
   if $('.popup-wrapper').hasClass('visible')
@@ -45,3 +50,14 @@ $document.on 'click', ->
       $('body').removeClass('opened-popup')
     {except: '.popup-btn, .product-popup'}
     )
+
+  if $(".info-work-popup").hasClass('visible')
+    $.clickOut('.inner-popup',
+      ()->
+        $('.info-work-popup').removeClass('visible')
+        $('body').removeClass('opened-popup')
+    {except: '.popup-work-btn, .inner-popup'}
+    )
+   
+
+  

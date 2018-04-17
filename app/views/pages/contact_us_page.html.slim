@@ -38,16 +38,16 @@
 		.row
 			.large-8.columns.large-centered
 				.big-title.black напишіть нам
-				form
+				form action="consultation" method="post" enctype="multipart/form-data"
 					.medium-6.columns
 						.input-field
-							input#name name="firstname"
+							input#name name="firstname" type="text" value=""
 							label Імʼя
 						.input-field
-							input#phone name="phone"
+							input#phone name="phone" type="text" value=""
 							label Телефон
 						.input-field
-							input#mail name="mail"
+							input#mail name="mail" type="text" value=""
 							label Ел.скринька
 
 					.medium-6.columns
@@ -55,7 +55,7 @@
 							textarea#textarea rows="10"
 							label.textarea ваші побажання...
 
-					button.button.red-btn
+					button.button.red-btn type="submit"
 						| замовити
 						.inner-border
 
