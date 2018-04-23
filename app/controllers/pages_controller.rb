@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def index
     @article = Article.limit(5).show
     @about_us = Aboutus.first
-
+    @main = Main.first
   end
 
   def about_us
@@ -44,6 +44,9 @@ class PagesController < ApplicationController
   end
   def consultation
     render json: {}
+  end
+  def policy
+    @policy = Policy.first
   end
   private
   def info

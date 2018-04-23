@@ -5,7 +5,7 @@
 		.medium-6.columns.medium-centered
 			.title-svg-box продукція
 			.red-line
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto commodi harum nesciunt quia veniam cupiditate incidunt quidem velit, quisquam soluta animi quod odit accusantium amet nihil vitae earum distinctio.
+			p =@main.second_description
 
 	.maet-types-wrap
 		.row
@@ -51,19 +51,19 @@
 		.medium-6.columns.medium-centered
 			.title-svg-box про нас
 			.red-line
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto commodi harum nesciunt quia veniam cupiditate incidunt quidem
+			p = @main.third_description
 
 	.content-box
 		.row
 			.medium-4.columns
 				.big-title лідер на ринку
 				.red-line
-				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aut sit nostrum veniam quidem reprehenderit cupiditate eum, dolorum. Nihil magni fugiat nisi, amet eius quasi ad totam. Velit iusto, eligendi.
+				p = @main.fourth_description
 				.button
 					|детальніше
 					.inner-border
 			.medium-7.columns
-				= render "video_block"
+				= render "video_block", video: @main.video_link
 
 
 	.svg-box

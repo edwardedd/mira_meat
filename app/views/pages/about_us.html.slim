@@ -12,7 +12,7 @@
 				=@about_us.description
 
 			.medium-6.large-5.columns
-				= render "video_block"
+				= render "video_block", video: @about_us.main_video
 
 	.specialized-trasport-wrap
 		.img-bg style="background-image: url(#{@about_us.second_image})"
