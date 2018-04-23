@@ -64,14 +64,17 @@
 .button
 	background-color: transparent
 	border: 1px dotted $light-blue-color
-	padding: 16px 30px
+	padding: 16px 0
 	text-transform: uppercase
 	font-family: AD
 	letter-spacing: 2px
 	display: inline-block
 	position: relative
 	cursor: pointer
+	text-align: center
+	width: 160px
 	color: $red-color
+	+transition(.3s)
 	.inner-border
 		position: absolute
 		top: 3px
@@ -88,6 +91,7 @@
 	&.paly-btn
 		padding: 8px
 		border: 1px dotted $white-color
+		width: auto
 		svg
 			width: 33px
 			height: 29px
@@ -105,7 +109,13 @@
 		background-color: $white-color
 		.inner-border
 			border: 2px solid $red-color
-
+	
+	&:hover
+		letter-spacing: 4px
+		background-color: $red-color
+		color: $white-color
+		.inner-border
+			border: 2px solid $white-color
 
 .red-line
 	width: 46px

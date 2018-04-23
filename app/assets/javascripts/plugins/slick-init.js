@@ -3,7 +3,7 @@ $(".slider").slick({
   infinite: true,
   dots: true,
   arrows: true,
-  autoplay: true,
+  autoplay: false,
   nextArrow: $('.slider-container').find('.next-btn'),
   prevArrow: $('.slider-container').find('.prev-btn')
 });

@@ -3,13 +3,9 @@
 		.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
 		.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
 	ul.slider
-		li 
-			.img-bg style="background-image: url(#{asset_path('photo/banner-1.jpg')})"
-		li 
-			.img-bg style="background-image: url(#{asset_path('photo/sample-2.jpg')})"
-		li 
-			.img-bg style="background-image: url(#{asset_path('photo/sample-7.jpg')})"
-
+		- @headerslider.each do |i|
+			li
+				.img-bg style="background-image: url(#{i.image})"
 	.content-banner
 		.row
 			.medium-7.large-5.columns

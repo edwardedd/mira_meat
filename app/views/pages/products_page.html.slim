@@ -2,23 +2,23 @@
 	.page-inner-banner-wrap
 		.img-bg style="background-image: url(#{asset_path('photo/Main-Photo-toning-1.jpg')})"
 		.head-title.font-ad Продукція
-	
+
 	.filter-btn-box
 		.row
-			.columns.medium-8.large-7
+			.columns.medium-8.large-7.small-6
 				.one-filter-btn.filter.active data-filter="all" всі
 				.one-filter-btn.filter data-filter=".category-a" свинина
 				.one-filter-btn.filter data-filter=".category-b" яловичина
 				.one-filter-btn.filter data-filter=".category-c" курятина
 				.one-filter-btn.filter data-filter=".category-d" індичатина
-		 
 
-			.columns.medium-4.large-5
+
+			.columns.medium-4.large-5.small-6
 				select.FilterSelect
 					option value="all" Вся прокукція
 					option value=".inport" Імпорт
 					option value=".export" Експорт
-				
+
 				select.SortSelect
 					option value="myorder:asc" data-sort="order:asc" Ціна за зростанням
 					option value="myorder:desc" data-sort="order:desc" Ціна за спаданням
@@ -32,7 +32,7 @@
 						.manufacturer-box Україна | mira meat
 						.prise.font-ad 60 грн
 					.title Шия
-			
+
 			.large-3.medium-4.columns.category-b.mix.inport data-order="22"
 				.one-product.popup-btn data-btn-attr="order-form"
 					.inner-container
@@ -41,6 +41,7 @@
 						.manufacturer-box польша
 						.prise.font-ad 60 грн
 					.title Шия
+					= render "one_product_popup"
 
 
 			.large-3.medium-4.columns.category-c.mix.export data-order="30"
@@ -70,7 +71,7 @@
 						.manufacturer-box США
 						.prise.font-ad 60 грн
 					.title Шия
-			
+
 			.large-3.medium-4.columns.category-b.mix.export data-order="12"
 				.one-product.popup-btn data-btn-attr="order-form"
 					.inner-container

@@ -19,6 +19,7 @@
 #= require plugins/lightgallery-initialize
 #= require plugins/owl.carousel.min
 #= require plugins/owlCarousel
+#= require plugins/jquery.form.min
 
 #     I N I T I A L I Z E
 
@@ -30,3 +31,4 @@
 #= require tabs
 #= require links
 #= require play-video
+#= require jquery_form

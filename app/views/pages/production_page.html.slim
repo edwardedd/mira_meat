@@ -1,38 +1,37 @@
 .production-page.white-bg
 	.page-inner-banner-wrap
-		.img-bg style="background-image: url(#{asset_path('photo/mm-retail-banner-img-1.jpg')})"
+		.img-bg style="background-image: url(#{@production.main_image})"
 		.head-title.font-ad Виробництво
-	
+
 	.about-production-wrap
 		.row
 			.columns
 				.red-line.big
-				p За короткий час команія Mira Meat налагодила процес обробки м'ясної продукції
+				p
+					= @production.first_title
 
 	.about-technology-wrap
 		.row
 			.medium-10.columns.medium-centered
 				.img-container.one-container-dotted.white-dotted.no-hover
-					.img-bg style="background-image: url(#{asset_path('photo/Main-Photo-toning-1.jpg')})"
+					.img-bg style="background-image: url(#{@production.second_image})"
 				.img-content-container
 					.row
 						.large-4.columns
-							.big-title.white Сучасний цех обвалювання
+							.big-title.white = @production.second_title
 							.red-line.white.left.big
 						.large-7.columns
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis voluptates, excepturi natus nostrum nihil modi illo voluptatibus laborum dolore, alias ullam, autem error repellat rerum animi suscipit porro voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam officiis voluptates, excepturi natus nostrum nihil modi illo voluptatibus laborum dolore, alias ullam, autem error repellat rerum animi suscipit porro voluptatum.
-
+							p
+								= @production.description
 
 	.respect-client-wrap
 		.row
 			.columns
 				.content-box
-					.big-title.white ми поважаємо вибір наших клієнтів
+					.big-title.white = @production.review_title
 					.red-line.big.white
-					p 
-						|Тому для них ми постійно вдосконалюємось, впроваджуючи 
-						br
-						|європейські цінності в Україні
+					p
+						= @production.review_description
 
 					.button.white-red
 						.inner-border

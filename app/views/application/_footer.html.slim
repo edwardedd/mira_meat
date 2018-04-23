@@ -19,17 +19,22 @@
 
 	.girizontal-svg = inline_svg "svg/MM-symbol-3-v1.svg"
 
-	p Вул.Грушевського 77,с.Надичі,Жовківський район,Львівська облать,Україна
+	p =@contact.first_adress
 
 	ul.footer-contacts
 		li
-			a href="tel:+38 (097) 249 17 77" +38 (097) 249 17 77 
-		li 
-			a href="tel:+38 (032) 523 17 00" +38 (032) 523 17 00
-		li 
-			a href="milito:expoaps@gmail.com" expoaps@gmail.com
-
-	
+			a href="tel:#{@contact.first_number}" #{@contact.first_number}
+		-if @contact.second_number
+			li
+				a href="tel:#{@contact.second_number}" #{@contact.second_number}
+		-if @contact.third_number
+			li
+				a href="tel:#{@contact.third_number}" #{@contact.third_number}
+		li
+			a href="milito:#{@contact.first_email}" #{@contact.first_email}
+		-if @contact.second_email
+			li
+				a href="milito:#{@contact.second_email}" #{@contact.second_email}
 	.bottom-footer
 		.row
 			.medium-4.columns

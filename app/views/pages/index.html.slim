@@ -51,7 +51,7 @@
 		.medium-6.columns.medium-centered
 			.title-svg-box про нас
 			.red-line
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto commodi harum nesciunt quia veniam cupiditate incidunt quidem 
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto commodi harum nesciunt quia veniam cupiditate incidunt quidem
 
 	.content-box
 		.row
@@ -59,7 +59,7 @@
 				.big-title лідер на ринку
 				.red-line
 				p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aut sit nostrum veniam quidem reprehenderit cupiditate eum, dolorum. Nihil magni fugiat nisi, amet eius quasi ad totam. Velit iusto, eligendi.
-				.button 
+				.button
 					|детальніше
 					.inner-border
 			.medium-7.columns
@@ -79,11 +79,11 @@
 
 
 .products-tupe-wrap
-	a.one-product-tupe-box.one-container-dotted href=production_page_path 
+	a.one-product-tupe-box.one-container-dotted href=production_page_path
 		.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
 		.title-svg-line-box.big.white виробництво
 
-	a.one-product-tupe-box.one-container-dotted href=wholesale_page_path 
+	a.one-product-tupe-box.one-container-dotted href=wholesale_page_path
 		.img-bg style="background-image: url(#{asset_path('photo/MM-img-whosale-v1.jpg')})"
 		.title-svg-line-box.big.white гуртовикам
 
@@ -95,14 +95,14 @@
 .news-wrap.section-indent
 	.title-svg-box новини
 	.row.columns-left
-		- 5.times do |i|
+		- @article.each do |article|
 			.medium-6.large-4.columns
-				a.news-one href=one_news_page_path
-					.date 21 листопада, 2017
-					.big-title лідер на ринку на ринку 
-					p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+				a.news-one href=one_news_page_path(article)
+					.date =article.date
+					.big-title =article.title
+					=article.second_title
 
-	
+
 		a.button href=news_page_path
 			| всі новини
 			.inner-border

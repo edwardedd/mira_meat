@@ -33,6 +33,7 @@ p
 	margin-top: 50px
 	letter-spacing: 4px
 	font-family: AD
+	+transition(.3s)
 	&:before
 		content: ""
 		background-image: asset_url('svg/MM-symbol-2-v1.svg')
@@ -52,9 +53,9 @@ p
 		color: $white-color
 		&:before
 			content: ""
-			top: 40px
+			top: -40px
 			width: 180px
-			height: 15px	
+			height: 15px
 			background-image: asset_url('svg/MM-symbol-2a-v1.svg')
 
 
@@ -70,7 +71,7 @@ p
 		bottom: 15px
 		border: 1px dotted $light-blue-color
 		z-index: 5
-    
+
 
 	&:hover
 		&:before
@@ -93,6 +94,7 @@ p
 	margin-bottom: 50px
 	display: block
 	position: relative
+
 	.date
 		font-size: 12px
 		text-transform: uppercase
@@ -101,6 +103,7 @@ p
 		line-height: 0.9
 		max-height: 64px
 		overflow: hidden
+		+transition(.3s)
 	p
 		margin-bottom: 20px
 		max-height: 60px
@@ -125,12 +128,16 @@ p
 			font-size: 18px
 			min-height: 100px
 
+	&:hover
+		.big-title
+			letter-spacing: 3px
+
 .partners-wrap
 	// padding: 50px 0
 	background-color: $red-color
 	li
 		position: relative
-		padding: 50px 
+		padding: 50px
 		&:after
 			content: ""
 			display: block
@@ -177,7 +184,7 @@ li.nav
 		font-size: 18px
 		font-weight: 600
 		display: block
-		margin-bottom: 20px
+		margin-bottom: 10px
 	.button
 		margin-top: 40px
 
@@ -218,9 +225,13 @@ li.nav
 		color: $black-color
 		padding: 10px 15px
 		font-weight: 600
-		&.active, &:hover
+		&.active
 			background-color: $black-color
 			color: $white-color
+		&:hover
+			color: $white-color
+			background-color: $red-color
+
 
 	.one, svg
 		vertical-align: middle
@@ -316,7 +327,7 @@ li.nav
 			&:after
 				right: -90px
 
-		
+
 		+breakpoint(small only)
 			.img-box
 				height: 200px
@@ -329,4 +340,23 @@ li.nav
 
 				&:after
 					right: -60px
-		
+
+
+.login-form
+	+x-align
+	position: relative
+	margin: 100px 0
+	width: 550px
+	padding: 50px
+	max-width: 100%
+	.title
+		font-size: 32px
+		text-align: center
+		text-transform: uppercase
+		padding-top: 20px
+	button
+		display: block
+		margin-top: 10px
+	.check-box
+		label
+			margin-left: 10px

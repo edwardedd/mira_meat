@@ -4,47 +4,50 @@
 		.columns
 			.contact-container
 				.container-img
-					.img-bg style="background-image: url(#{asset_path('photo/sample-1.jpg')})"
+					.img-bg style="background-image: url(#{@contact.image})"
 
 				.contact-us-box.black
 					.head-title раді вас бачити
 					.red-line.big.left
 					.title.white телефон
-					a href="tel:+38 (097) 249 17 77" +38 (097) 249 17 77
-					a href="tel:+38 (032) 523 17 00" +38 (032) 523 17 00
+					a href="tel:#{@contact.first_number}" #{@contact.first_number}
+					-if @contact.second_number
+						a href="tel:#{@contact.second_number}" #{@contact.second_number}
+					-if @contact.third_number
+						a href="tel:#{@contact.third_number}" #{@contact.third_number}
 					.title.white електронна скринька
-					a.mail href="milito:expoaps@gmail.com" expoaps@gmail.com
+					a.mail href="milito:#{@contact.first_email}" #{@contact.first_email}
+					-if @contact.second_email
+						a.mail href="milito:#{@contact.second_email}" #{@contact.second_email}
 					.title.white адреса
-					p Вул.Грушевського 77,с.Надичі,Жовківський район,Львівська облать,Україна
-					.button
+					p = @contact.first_adress
+					a.button href="#{@contact.map_link}"
 						.inner-border
 						|глянути на карті
 
 					.social-box
 						.title ми в соц. мережах
-						a.social href="" = inline_svg "svg/mm-button-social-youtube.svg"
-						a.social href="" = inline_svg "svg/mm-button-social-tw.svg"
-						a.social href="" = inline_svg "svg/mm-button-social-face.svg"
+						a.social href="#{@contact.youtube}" = inline_svg "svg/mm-button-social-youtube.svg"
+						a.social href="#{@contact.twitter}" = inline_svg "svg/mm-button-social-tw.svg"
+						a.social href="#{@contact.facebook}" = inline_svg "svg/mm-button-social-face.svg"
 
 	.svg-line = inline_svg "svg/MM-symbol-3-v1.svg"
 
-	
-			
-			
+
 	.form-box
 		.row
 			.large-8.columns.large-centered
 				.big-title.black напишіть нам
-				form
+				form action="consultation" method="post" enctype="multipart/form-data"
 					.medium-6.columns
 						.input-field
-							input#name name="firstname"
+							input#name name="firstname" type="text" value=""
 							label Імʼя
 						.input-field
-							input#phone name="phone"
+							input#phone name="phone" type="text" value=""
 							label Телефон
 						.input-field
-							input#mail name="mail"
+							input#mail name="mail" type="text" value=""
 							label Ел.скринька
 
 					.medium-6.columns
@@ -52,7 +55,7 @@
 							textarea#textarea rows="10"
 							label.textarea ваші побажання...
 
-					button.button.red-btn
+					button.button.red-btn type="submit"
 						| замовити
 						.inner-border
 
