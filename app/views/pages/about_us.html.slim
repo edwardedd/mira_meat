@@ -1,39 +1,38 @@
 .adout-us-page
 	.page-inner-banner-wrap
-		.img-bg style="background-image: url(#{asset_path('photo/sample-8.jpg')})"
+		.img-bg style="background-image: url(#{@about_us.main_image})"
 		.head-title.font-ad про нас
 		.logo-box.one-container-dotted.white-dotted.no-hover = inline_svg "svg/mm-logo-vert.svg"
 
 	.whith-video-wrap.white-bg
 		.row
 			.large-6.columns
-				.big-title.black основна галузь, якою займається компанія "агропобутсервіс" є імпорт м'ясної продукції.
+				.big-title.black =@about_us.title
 				.red-line.left.big
-				p  Зі збільшенням попиту на м`ясну продукцію компанія в 2015 році ввела в експлуатацію цех обвалювання, оснащеним лінією обвалки та шоковою камерою. Таким чином ТзОВ «Агропобутсервіс» стала не лише імпортером а й виробником, який працює на вітчизняній сировині. На даний момент цех обвалює понад 16-20 тон свинини в добу, та реалізовує власну продукцію під торговою маркою «Mira Meat».Орієнтуючись на міжнародні стандарти якості, компанія за короткий час налагодила процес обробки м`ясної продукції та відкрила нові ринки збуту в Західній, Східній Європі та на Близькому Сході. Зараз Mira Meat активно розвивається нарощуючи об`єми імпорту та експорту, укладаючи нові ділові угоди на міжнародному рівні.
+				=@about_us.description
 
 			.medium-6.large-5.columns
 				= render "video_block"
 
 	.specialized-trasport-wrap
-		.img-bg style="background-image: url(#{asset_path('photo/mm-about-banner-img-1.jpg')})"
+		.img-bg style="background-image: url(#{@about_us.second_image})"
 		.content-box
-			.title-svg-line-box.white.big спеціалізований автопарк
-			p  Підприємство має в своїх активах спеціалізований автопарк оснащений холодильними установками для транспортування охолодженої та мороженої продукції. Таким чином транспортування відбувається лише в правильних температурних режимах.
+			.title-svg-line-box.white.big =@about_us.second_title
+			p =@about_us.second_description
 
 	.our-palns-wrap.white-bg
 		.row
 			.columns
-				.big-title.black наші плани
+				.big-title.black =@about_us.third_title
 				.red-line.left.big
 		.row
 			.columns.medium-6
-				p  На сьогоднішній день ТзОВ "Агропобутсервіс" закуповує живі свині , які після забою поступають в цех обвалювання.
-				p В планах підприємства побудувати власне комплексне приміщення бойні, зпотужністю 100-180 одиниць свиней, разом із приміщенням обвалювання свинини, що дасть можливість забезпечити безперебійний виробничий процес, та значно збільшити виробничі можливості.
+				p =@about_us.third_description
 			.columns.medium-6
-				p  Тож ТзОВ «Агропобутсервіс» постійно розвивається втілюючи європейські принципи роботи в Україні. В планах підприємства розширити свої виробничі можливості, таким чином внести вагомий вклад в розвиток цілого західного регіону. Нові робочі місця, зростання та ефективний розвиток сировинної бази регіону (як молочної так і м`ясної) , випуск більш якісної продукції, яка беззаперечно зможе вільно конкурувати із імпортною продукцією, та вивести дані галузі на вищий рівень розвитку.
+				p =@about_us.third_description_right
 
 	.blockquote-wrap
-		blockquote  Основною цінністю компанії являється довіра наших партнерів та кінцевого споживача. Багаторічний досвід та кваліфікованість наших працівників дозволяє нам знайти спільну мову з усіма замовниками та в кінцевому результаті досягнути успіху в даній справі. Бездоганна репутація підтверджується почесними нагородами і довірою Українських та закордонних партнерів.
+		blockquote  =@about_us.frase
 
 	.history-wrap.white-bg
 		.row
@@ -94,7 +93,7 @@
 			.columns
 				.big-title.black наша історія
 				.red-line.big
-				p Ми переконані: взаєморозуміння, наполеглева і злагодженна прця, готовність підтримувати одне одного обов'язково принесуть баженай результат - моральне і матеріальне задоволення. Погоджуєтеся? Тоді запрошуємо Вас у нашу команду!
+				p =@about_us.history_text
 
 		.vacanies-box
 			.row.columns-left
@@ -145,15 +144,16 @@
 				.big-title.black сертифікати
 				.red-line.big
 				ul.owl-carousel.owl-theme.animated_thumbnails
-					- 9.times do |i|
+					- @sertificates.each do |sertificates|
 						li
-							a.lg_object.one-box-container.sm-translate.three-anims.one-container-dotted.white-dotted href=asset_path"photo/certificate.jpg"
+							a.lg_object.one-box-container.sm-translate.three-anims.one-container-dotted.white-dotted href=sertificates.image
 								= inline_svg 'svg/mm-button-plus.svg'
 								.img-bg
-									img src=asset_path"photo/certificate.jpg"
+									img src=sertificates.image
 								.info-genegal-box
 									.info-box
-										.title Декларація ТР ТС
+										.title
+											=sertificates.name
 				.button-box
 					.button.dib
 						.inner-border

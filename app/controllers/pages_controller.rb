@@ -2,11 +2,13 @@ class PagesController < ApplicationController
    before_filter :info
   def index
     @article = Article.limit(5).show
+    @about_us = Aboutus.first
+
   end
 
   def about_us
     @about_us = Aboutus.first
-    @serticate = Sertificate.show
+    @sertificates = Sertificate.all.show
   end
 
   def news_page
@@ -48,6 +50,5 @@ class PagesController < ApplicationController
     @headerslider = Headerslider.show
     @footerslider = Footerslider.show
     @contact = Contact.first
-
   end
 end
