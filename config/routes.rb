@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     get "production-page", action: "production_page"
     get "wholesale-page", action: "wholesale_page"
     post "consultation", action: "consultation"
+    get "policy", action: "policy"
   end
 
   match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]

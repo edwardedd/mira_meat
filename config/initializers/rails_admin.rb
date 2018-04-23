@@ -39,7 +39,7 @@ RailsAdmin.config do |config|
     # history_show
 
   end
-  config.included_models = [History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
+  config.included_models = [Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
     config.model History do
       navigation_label "Про нас"
       label " Наша Історія"
@@ -69,7 +69,11 @@ RailsAdmin.config do |config|
       field :second_description, :ck_editor
       field :photo_description, :ck_editor
     end
-
+  config.model Policy do
+    navigation_label "Політика конфідеційності"
+    label "Політика конфідеційності"
+    field :text, :ck_editor
+  end
   config.model Sertificate do
     navigation_label "Про нас"
     label "Сертифікати"
@@ -88,6 +92,11 @@ RailsAdmin.config do |config|
     navigation_label "Контакти"
     label "Контакти"
     include_fields :image, :first_number, :second_number, :third_number, :first_email, :second_email, :image, :first_adress, :map_link, :facebook, :twitter, :youtube
+  end
+  config.model Main do
+    navigation_label "Головна"
+    label "Головна"
+    include_fields :main_description, :second_description, :third_description, :fourth_description, :video_link
   end
 
   config.model Retailslider do
