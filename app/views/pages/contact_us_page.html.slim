@@ -38,16 +38,16 @@
 		.row
 			.large-8.columns.large-centered
 				.big-title.black напишіть нам
-				form action="consultation" method="post" enctype="multipart/form-data"
+				form action="/consultation" method="post" enctype="multipart/form-data"
 					.medium-6.columns
 						.input-field
-							input#name name="firstname" type="text" value=""
+							input#name required="" name="firstname" type="text" value=""
 							label Імʼя
 						.input-field
-							input#phone name="phone" type="text" value=""
+							input#phone required=""name="phone" type="text" value=""
 							label Телефон
 						.input-field
-							input#mail name="mail" type="text" value=""
+							input#mail required="" name="mail" type="text" value=""
 							label Ел.скринька
 
 					.medium-6.columns
