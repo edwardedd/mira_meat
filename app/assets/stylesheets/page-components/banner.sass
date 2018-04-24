@@ -2,6 +2,26 @@
 	position: relative
 	height: 100vh
 	
+	.video-background
+		+fullsize
+		z-index: -1
+		overflow: hidden
+		.video-foreground
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background-color: black
+			pointer-events: none
+			+scale(1.4)
+			+grayscale
+			iframe
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
 	.slider
 		+fullsize
 	.slick-slide

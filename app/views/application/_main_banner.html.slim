@@ -1,11 +1,14 @@
 .main-banner.slider-container
-	.buttons-box
-		.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
-		.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
-	ul.slider
-		- @headerslider.each do |i|
-			li
-				.img-bg style="background-image: url(#{i.image})"
+	.video-background
+		.video-foreground
+			iframe#bg-video frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" scrolling="no" src="https://www.youtube.com/embed/qEOTVY1TMWk?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=qEOTVY1TMWk&mute=1"
+	/ .buttons-box
+	/ 	.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
+	/ 	.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
+	/ ul.slider
+	/ 	- @headerslider.each do |i|
+	/ 		li
+	/ 			.img-bg style="background-image: url(#{i.image})"
 	.content-banner
 		.row
 			.medium-7.large-5.columns
