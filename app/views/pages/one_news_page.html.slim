@@ -3,46 +3,40 @@
 	.row
 		.medium-10.columns.medium-centered
 			.img-container
-				.img-bg style="background-image: url(#{asset_path('photo/sample-8.jpg')})"
+				.img-bg style="background-image: url(#{@article.main_image})"
 			.under-photo
-				span 27 листопада 2017
+				span =@article.date
 				a href="" = inline_svg "svg/mm-button-share.svg"
 
-			h2.big-title Укріїна збільшила експорт мʼяса в півтори рази
+			h2.big-title =@article.title
 
-			p.with-line  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam unde perferendis ad nostrum, quasi aspernatur in dignissimos
+			p.with-line  =@article.second_title
 
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur nam unde perferendis ad nostrum, quasi aspernatur in dignissimos
-
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ipsa cum molestias ea ab a amet nulla autem fugiat, aliquam nisi quos delectus, nostrum laudantium quae. Explicabo, iusto sit aperiam. consectetur adipisicing elit. Quam ipsa cum molestias ea ab a amet nulla autem fugiat, aliquam nisi quos delectus, nostrum laudantium quae. Explicabo, iusto sit aperiam.
+			= raw @article.first_description
 
 			.box-img
-				.img-bg style="background-image: url(#{asset_path('photo/sample-8.jpg')})"
+				.img-bg style="background-image: url(#{@article.second_image})"
 
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nostrum earm
+			= raw @article.photo_description
 
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nostrum earu
-
-			ul
-				li Lorem 
-				li asdasd
-				li Lorem ipsum...
-				li asdasd
-
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil non, voluptatum beatae vitae 
-
-			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eum fugit esse soluta beatae unde nam vitae illo adipisci assumenda, omnis explicabo libero in quibusdam maxime voluptas delectus blanditiis provident!
-
+			p.with-line = raw @article.second_description
 	.others-news-wrap
 		.title інші новини
 		.red-line.big
 		.row.columns-left
-			- 3.times do |i|
-				.medium-6.large-4.columns
-					a.news-one href=one_news_page_path
-						.date 21 листопада, 2017
-						.big-title лідер на ринку на ринку 
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam praesentium ducimus debitis provident vero a excepturi adipisci eos 
+				-if @previous
+					.medium-6.large-6.columns
+						a.news-one href=one_news_page_path(@previous)
+							.date =@previous.date
+
+							.big-title =@previous.title
+							=@previous.second_title
+				-if @next
+					.medium-6.large-6.columns
+						a.news-one href=one_news_page_path(@next)
+							.date =@next.date
+							.big-title =@next.title
+							=@next.second_title
 
 
 = render "partners_slider_wrap"

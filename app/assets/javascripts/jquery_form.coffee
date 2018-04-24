@@ -1,4 +1,4 @@
-$('form').on 'submit', (e)->
+$document.on 'submit', 'form.ajax-form', (e)->
 	e.preventDefault();
 	$form = $(this)
 	$(this).ajaxSubmit({
@@ -12,4 +12,3 @@ $('form').on 'submit', (e)->
 				), 1000
 			$(this)[0].reset()
 	})
-

@@ -55,7 +55,7 @@ p
 			content: ""
 			top: -40px
 			width: 180px
-			height: 15px	
+			height: 15px
 			background-image: asset_url('svg/MM-symbol-2a-v1.svg')
 
 
@@ -71,7 +71,7 @@ p
 		bottom: 15px
 		border: 1px dotted $light-blue-color
 		z-index: 5
-    
+
 
 	&:hover
 		&:before
@@ -137,7 +137,7 @@ p
 	background-color: $red-color
 	li
 		position: relative
-		padding: 50px 
+		padding: 50px
 		&:after
 			content: ""
 			display: block
@@ -327,7 +327,7 @@ li.nav
 			&:after
 				right: -90px
 
-		
+
 		+breakpoint(small only)
 			.img-box
 				height: 200px
@@ -340,4 +340,23 @@ li.nav
 
 				&:after
 					right: -60px
-		
+
+
+.login-form
+	+x-align
+	position: relative
+	margin: 100px 0
+	width: 550px
+	padding: 50px
+	max-width: 100%
+	.title
+		font-size: 32px
+		text-align: center
+		text-transform: uppercase
+		padding-top: 20px
+	button
+		display: block
+		margin-top: 10px
+	.check-box
+		label
+			margin-left: 10px

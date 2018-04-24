@@ -39,7 +39,46 @@ RailsAdmin.config do |config|
     # history_show
 
   end
-  config.included_models = [Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
+  config.included_models = [Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
+    config.model History do
+      navigation_label "Про нас"
+      label " Наша Історія"
+      include_fields :title, :image, :show
+      field :year, :enum do
+       enum ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","2027","2028"]
+      end
+      field :description, :ck_editor
+    end
+    config.model Aboutus do
+      navigation_label "Про нас"
+      label " Основна інформація"
+      include_fields :title, :description, :main_image, :main_video, :video_cover, :second_title, :second_description, :second_image, :third_title, :third_description, :third_description_right, :frase, :history_text
+    end
+
+
+    config.model Article do
+      navigation_label "Новини"
+      label "Новини"
+      configure :date do
+      strftime_format do
+        "%d.%m.%Y"
+      end
+      end
+      include_fields :title, :second_title, :main_image, :second_image, :date, :show
+      field :first_description, :ck_editor
+      field :second_description, :ck_editor
+      field :photo_description, :ck_editor
+    end
+  config.model Policy do
+    navigation_label "Політика конфідеційності"
+    label "Політика конфідеційності"
+    field :text, :ck_editor
+  end
+  config.model Sertificate do
+    navigation_label "Про нас"
+    label "Сертифікати"
+    include_fields :image, :name, :show
+  end
 
   config.model Product do
     navigation_label "Продукти"
@@ -53,6 +92,11 @@ RailsAdmin.config do |config|
     navigation_label "Контакти"
     label "Контакти"
     include_fields :image, :first_number, :second_number, :third_number, :first_email, :second_email, :image, :first_adress, :map_link, :facebook, :twitter, :youtube
+  end
+  config.model Main do
+    navigation_label "Головна"
+    label "Головна"
+    include_fields :main_description, :second_description, :third_description, :fourth_description, :video_link
   end
 
   config.model Retailslider do

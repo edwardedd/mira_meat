@@ -1,7 +1,7 @@
 .popup-wrapper.white-bg
 	.close-popup = inline_svg "svg/MM-menu-close-v1.svg"
 	.title.font-ad форма замовлення
-	form
+	form.ajax-form
 		.input-field
 			input#name name="firstname"
 			label Імʼя
@@ -23,7 +23,7 @@
 				option value=".inport" Milck
 				option value=".export" pokl
 				option value=".inport" asdasodkl
-		.input-field		
+		.input-field
 			select
 				option value="" data-sort="" Кількість
 				option value="" data-sort="" 200-1000кг(дрібний гурт)

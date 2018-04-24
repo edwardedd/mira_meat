@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+   before_filter :info
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -11,7 +12,11 @@ class ApplicationController < ActionController::Base
   # include Cms::Helpers::MetaDataHelper
   # include Cms::Helpers::NavigationHelper
   # include Cms::Helpers::ActionView::UrlHelper
-
+  def info
+    @headerslider = Headerslider.show
+    @footerslider = Footerslider.show
+    @contact = Contact.first
+  end
   def render_not_found
     render template: "errors/not_found.html.slim"
   end
