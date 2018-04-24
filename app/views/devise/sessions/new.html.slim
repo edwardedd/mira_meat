@@ -1,7 +1,7 @@
 -@black_header = true
-form.login-form.white-bg
+.login-form.white-bg
   .title Вхід
-  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  = form_for(resource, as: resource_name, url: session_path(resource_name), method: :post) do |f|
     .input-field
       = f.label :email
       br/
