@@ -20,6 +20,7 @@
 #= require plugins/owl.carousel.min
 #= require plugins/owlCarousel
 #= require plugins/jquery.form.min
+#= require plugins/jquery.validate.min
 
 #     I N I T I A L I Z E
 
