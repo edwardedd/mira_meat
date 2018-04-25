@@ -7,24 +7,49 @@
 		.row
 			.columns
 				.big-title.black =@retail.first_title
-				.red-line
+				.red-line.big
 				p =@retail.second_title
-				.big-title
-					=@retail.third_title
-					.line
-
+				/ .big-title
+				/ 	=@retail.third_title
+				/ 	.line
+	
 	.row
-		.columns
-			.slider-container
-				.buttons-box
-					.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
-					.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
-				ul.slider
-					-@retailslider.each do |slide|
-						li
-							.img-bg style="background-image: url(#{slide.image})"
-							.content-banner
-								.big-title.white =slide.first_title
-								p =slide.second_title
+		.columns.medium-3
+			.one-product-tupe-box
+				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
+				.title-svg-line-box.white відкриття власних магазинів
+		.columns.medium-3
+			.one-product-tupe-box
+				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
+				.title-svg-line-box.white мережі супермаркетів
+		.columns.medium-3
+			.one-product-tupe-box
+				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
+				.title-svg-line-box.white гурт
+		.columns.medium-3
+			.one-product-tupe-box
+				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
+				.title-svg-line-box.white дрібний гурт для не великих підприємств
+					
+
+
+
+
+
+
+		/// S L I D E R    V E R S I O N ////
+
+
+			/ .slider-container
+			/ 	.buttons-box
+			/ 		.next-btn = inline_svg "svg/MM-arrow-right-v1.svg"
+			/ 		.prev-btn = inline_svg "svg/MM-arrow-left-v1.svg"
+			/ 	ul.slider
+			/ 		-@retailslider.each do |slide|
+			/ 			li
+			/ 				.img-bg style="background-image: url(#{slide.image})"
+			/ 				.content-banner
+			/ 					.big-title.white =slide.first_title
+			/ 					p =slide.second_title
 
 = render "partners_slider_wrap"
