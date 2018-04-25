@@ -105,21 +105,6 @@
 		padding-bottom: 50%
 		width: 33.3%
 		overflow: hidden
-		.title-svg-line-box
-			+x-align
-			bottom: 50px
-			color: $white-color
-			svg
-
-		.img-bg
-			&:before
-				content: ""
-				display: block
-				+fullsize
-				background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0.05) 29%, rgba(0,0,0,0.45) 93%, rgba(0,0,0,0.7) 100%)
-				background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.05) 29%,rgba(0,0,0,0.45) 93%,rgba(0,0,0,0.7) 100%)
-				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0.05) 29%,rgba(0,0,0,0.45) 93%,rgba(0,0,0,0.7) 100%)
-				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 )
 		&:hover
 			.img-bg
 				+scale(1.1)

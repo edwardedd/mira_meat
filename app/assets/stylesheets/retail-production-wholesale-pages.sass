@@ -18,39 +18,47 @@
 				z-index: 1
 				height: 90px
 				background-color: black
-	.slider-container
-		position: relative
-		margin-bottom: 200px
-
-		.content-banner
-			color: $white-color
-			+x-align
-			bottom: 50px
+		
+	.one-product-tupe-box
+		padding-bottom: 150%
+		margin-bottom: 100px
+		.title-svg-line-box
 			text-align: center
-			p
-				font-weight: 600
+			width: 90%
 
-		.slick-slide
-			height: 60vh
-			position: relative
-			+breakpoint(xlarge only)
-				height: 80vh
-		.slick-dots
-			+x-align
-			bottom: -50px
-			li
-				border: 1px solid $black-color
-				&.slick-active
-					background-color: $black-color
+	// .slider-container
+	// 	position: relative
+	// 	margin-bottom: 200px
 
-		+breakpoint(small only)
-			margin-bottom: 100px
-			.content-banner
-				width: 95%
-			.slick-slide
-				height: 90vh
-			.buttons-box
-				display: none
+	// 	.content-banner
+	// 		color: $white-color
+	// 		+x-align
+	// 		bottom: 50px
+	// 		text-align: center
+	// 		p
+	// 			font-weight: 600
+
+	// 	.slick-slide
+	// 		height: 60vh
+	// 		position: relative
+	// 		+breakpoint(xlarge only)
+	// 			height: 80vh
+	// 	.slick-dots
+	// 		+x-align
+	// 		bottom: -50px
+	// 		li
+	// 			border: 1px solid $black-color
+	// 			&.slick-active
+	// 				background-color: $black-color
+
+	// 	+breakpoint(small only)
+	// 		margin-bottom: 100px
+	// 		.content-banner
+	// 			width: 95%
+	// 		.slick-slide
+	// 			height: 90vh
+	// 		.buttons-box
+	// 			display: none
 
 
 
@@ -74,6 +82,10 @@
 			position: relative
 			z-index: 10
 			min-height: 300px
+			blockquote
+				font-style: italic
+				font-size: 18px
+				line-height: 1.4
 			+breakpoint(small only)
 				margin: 50px auto
 
@@ -167,4 +179,4 @@
 				position: absolute
 				bottom: 50px
 				left: 50px
-				z-index: 1
+				z-index: 10
