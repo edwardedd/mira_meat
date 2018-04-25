@@ -4,5 +4,5 @@ $('.form-box form').on 'submit', (e)->
 	$(this).ajaxSubmit({
 		type: "POST"
 		success: (data) ->
-		$form[0].reset()
+			$form[0].reset()
 	})

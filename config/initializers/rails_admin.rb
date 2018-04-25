@@ -83,7 +83,7 @@ RailsAdmin.config do |config|
   config.model Product do
     navigation_label "Продукти"
     label "Одиниця продукціі"
-    include_fields :name, :type, :article_num, :country, :company_name, :image, :temperature, :import, :export, :present, :show
+    include_fields :name, :part_of_meat, :article_num, :country, :company_name, :image, :temperature, :import, :export, :present, :show, :price, :freeze_type
     field :category, :enum do
      enum [" Cвинина","Яловичина","Курятина","Індичатина"]
    end
@@ -96,7 +96,7 @@ RailsAdmin.config do |config|
   config.model Main do
     navigation_label "Головна"
     label "Головна"
-    include_fields :main_description, :second_description, :third_description, :fourth_description, :video_link
+    include_fields :main_description, :second_description, :third_description, :fourth_description, :video_link,:video_cover
   end
 
   config.model Retailslider do

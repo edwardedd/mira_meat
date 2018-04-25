@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180423161804) do
+ActiveRecord::Schema.define(version: 20180425083527) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 20180423161804) do
     t.text   "third_description"
     t.text   "fourth_description"
     t.string "video_link"
+    t.string "video_cover"
   end
 
   create_table "policies", force: :cascade do |t|
@@ -110,7 +111,7 @@ ActiveRecord::Schema.define(version: 20180423161804) do
 
   create_table "products", force: :cascade do |t|
     t.string  "name"
-    t.string  "type"
+    t.string  "part_of_meat"
     t.string  "article_num"
     t.string  "country"
     t.string  "company_name"
@@ -121,6 +122,8 @@ ActiveRecord::Schema.define(version: 20180423161804) do
     t.boolean "export"
     t.boolean "present"
     t.boolean "show"
+    t.integer "price"
+    t.string  "freeze_type"
   end
 
   create_table "retails", force: :cascade do |t|
@@ -138,9 +141,6 @@ ActiveRecord::Schema.define(version: 20180423161804) do
   end
 
   create_table "sertificates", force: :cascade do |t|
-    t.string  "name"
-    t.string  "image"
-    t.boolean "show"
   end
 
   create_table "users", force: :cascade do |t|
