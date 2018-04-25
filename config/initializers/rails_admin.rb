@@ -39,7 +39,7 @@ RailsAdmin.config do |config|
     # history_show
 
   end
-  config.included_models = [Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
+  config.included_models = [Vacancy,Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
     config.model History do
       navigation_label "Про нас"
       label " Наша Історія"
@@ -52,9 +52,13 @@ RailsAdmin.config do |config|
     config.model Aboutus do
       navigation_label "Про нас"
       label " Основна інформація"
-      include_fields :title, :description, :main_image, :main_video, :video_cover, :second_title, :second_description, :second_image, :third_title, :third_description, :third_description_right, :frase, :history_text
+      include_fields :title, :description, :main_image, :video_link, :video_cover, :second_title, :second_description, :second_image, :third_title, :third_description, :third_description_right, :frase, :history_text
     end
-
+    config.model Vacancy do
+      navigation_label "Про нас"
+      label "Ваканції"
+      include_fields :vacancy, :salary, :show
+    end
 
     config.model Article do
       navigation_label "Новини"
