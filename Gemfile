@@ -91,7 +91,7 @@ gem 'kaminari'
 # gem 'require_reloader'
 
 gem 'thin'
-
+gem 'pry'
 gem 'puma'
 gem 'rails_admin'
 gem 'carrierwave'

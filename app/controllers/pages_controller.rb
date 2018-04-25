@@ -9,6 +9,10 @@ class PagesController < ApplicationController
   def about_us
     @about_us = Aboutus.first
     @sertificates = Sertificate.all.show
+    @history = [History.year(2001).show,History.year(2002).show,History.year(2003).show,History.year(2004).show,History.year(2005).show,History.year(2006).show,History.year(2007).show,History.year(2008).show,History.year(2009).show,History.year(2010).show,
+      History.year(2011).show,History.year(2012).show,History.year(2013).show,History.year(2014).show,History.year(2015).show,History.year(2016).show,History.year(2017).show,History.year(2018).show,History.year(2019).show,History.year(2020).show,
+      History.year(2021).show,History.year(2022).show,History.year(2023).show,History.year(2024).show,History.year(2025).show,History.year(2026).show,History.year(2027).show,History.year(2028).show]
+    @vacancy = Vacancy.all.show
   end
 
   def news_page

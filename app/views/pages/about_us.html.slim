@@ -12,7 +12,7 @@
 				=@about_us.description
 
 			.medium-6.large-5.columns
-				= render "video_block", video: @about_us.main_video
+				= render "video_block", video: @about_us
 
 	.specialized-trasport-wrap
 		.img-bg style="background-image: url(#{@about_us.second_image})"
@@ -40,49 +40,39 @@
 				.big-title.black наша історія
 				.red-line.big
 		.accordion-box
-			.row
-				.medium-2.columns
-					.date.font-ad.dib 2018
-					.red-line.big.dib
-				.medium-10.columns
-					.accordion-button
-						span редизайн корпоративного сайту
+			- @history.each do |history|
+				-if history == []
+				-else
+					.row
+						.medium-2.columns
+							.date.font-ad.dib #{history.first.year}
+							.red-line.big.dib
+						.medium-10.columns
+							-history.each do |h|
+								.accordion-button
+									span = h.title
 
-					.accordion-inner
-						.img-container
-							.img-bg style="background-image: url(#{asset_path('photo/mm-retail-banner-img-1.jpg')})"
+								.accordion-inner
+									.img-container
+										.img-bg style="background-image: url(#{h.image})"
 
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
+									=raw h.description
 
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
-
-
-					.accordion-button
-						span новий цех обвалювання
-
-					.accordion-inner
-						.img-container
-							.img-bg style="background-image: url(#{asset_path('photo/mm-retail-banner-img-1.jpg')})"
-
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
-
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
-
-			.row
-				.medium-2.columns
-					.date.font-ad.dib 2016
-					.red-line.big.dib
-				.medium-10.columns
-					.accordion-button
-						span тепер ми експортуємо
-
-					.accordion-inner
-						.img-container
-							.img-bg style="background-image: url(#{asset_path('photo/mm-retail-banner-img-1.jpg')})"
-
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
-
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
+			/ .row
+			/ 	.medium-2.columns
+			/ 		.date.font-ad.dib 2016
+			/ 		.red-line.big.dib
+			/ 	.medium-10.columns
+			/ 		.accordion-button
+			/ 			span тепер ми експортуємо
+			/
+			/ 		.accordion-inner
+			/ 			.img-container
+			/ 				.img-bg style="background-image: url(#{asset_path('photo/mm-retail-banner-img-1.jpg')})"
+			/
+			/ 			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
+			/
+			/ 			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius exercitationem veritatis molestias quidem. Maiores itaque dolorum temporibus modi delectus voluptatem distinctio, perferendis eveniet, reprehenderit ipsam debitis ad quibusdam! Error.
 
 
 					/ .button
@@ -97,46 +87,13 @@
 
 		.vacanies-box
 			.row.columns-left
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
-				.columns.large-4.medium-6
-					.one-vacancies-box.popup-work-btn
-						.big-title.black іженер механік
-						.price від 15 000 грн
-						= inline_svg "svg/mm-button-plus.svg"
+				-if @vacancy
+					-@vacancy.each do |vacancy|
+						.columns.large-4.medium-6
+							.one-vacancies-box.popup-work-btn
+								.big-title.black =vacancy.vacancy
+								.price від #{vacancy.salary} грн
+								= inline_svg "svg/mm-button-plus.svg"
 
 	.certificates-wrap.white-bg
 		.row

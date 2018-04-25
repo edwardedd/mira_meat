@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425083527) do
+ActiveRecord::Schema.define(version: 20180425113759) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
     t.text   "description"
     t.string "main_image"
-    t.string "main_video"
+    t.string "video_link"
     t.string "second_title"
     t.text   "second_description"
     t.string "second_image"
@@ -141,6 +141,9 @@ ActiveRecord::Schema.define(version: 20180425083527) do
   end
 
   create_table "sertificates", force: :cascade do |t|
+    t.string  "name"
+    t.string  "image"
+    t.boolean "show"
   end
 
   create_table "users", force: :cascade do |t|
@@ -160,6 +163,12 @@ ActiveRecord::Schema.define(version: 20180425083527) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "vacancies", force: :cascade do |t|
+    t.string  "vacancy"
+    t.integer "salary"
+    t.boolean "show"
+  end
 
   create_table "wholesales", force: :cascade do |t|
     t.string "main_image"
