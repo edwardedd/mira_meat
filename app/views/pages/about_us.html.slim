@@ -116,7 +116,7 @@
 						.inner-border
 						= inline_svg "svg/mm-button-download.svg"
 					.button-text.dib
-						.title Завантажити архівом
-						.size 28.1 МБ
+						.title 
+							= link_to "Завантажити архівом", "#{Aboutus.first.file}"
 
 = render "partners_slider_wrap"
