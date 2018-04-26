@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180425113759) do
+ActiveRecord::Schema.define(version: 20180426125500) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180425113759) do
     t.text   "frase"
     t.text   "history_text"
     t.string "video_cover"
+    t.string "file"
   end
 
   create_table "articles", force: :cascade do |t|

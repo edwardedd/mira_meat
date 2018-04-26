@@ -55,6 +55,9 @@ class PagesController < ApplicationController
   end
   def productpopup
   end
+  def donwload(file)
+    send_file Aboutus.first.file
+  end
   private
   def info
     @headerslider = Headerslider.show
