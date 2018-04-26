@@ -22,85 +22,48 @@
 				select.SortSelect
 					option value="myorder:asc" data-sort="order:asc" Ціна за зростанням
 					option value="myorder:desc" data-sort="order:desc" Ціна за спаданням
-					
+
 	.products-container
 		.row.columns-left.mix-container
-			.large-3.medium-4.columns.category-a.mix.inport data-order="21"
-				.one-product.popup-btn data-btn-attr="order-form" data-popup-ajax=""
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box Україна | mira meat
-						.prise.font-ad 60 грн
-					.title Шия
-
-			.large-3.medium-4.columns.category-b.mix.inport data-order="22"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box польша
-						.prise.font-ad 60 грн
-					.title Шия
-					/ = render "one_product_popup"
-
-
-
-			.large-3.medium-4.columns.category-c.mix.export data-order="30"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box китай
-						.prise.font-ad 60 грн
-					.title Шия
-
-			.large-3.medium-4.columns.category-d.mix.export data-order="50"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box корея
-						.prise.font-ad 60 грн
-					.title Шия
-
-
-			.large-3.medium-4.columns.category-b.mix.export data-order="82"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box США
-						.prise.font-ad 60 грн
-					.title Шия
-
-			.large-3.medium-4.columns.category-b.mix.export data-order="12"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box Британія
-						.prise.font-ad 612 грн
-					.title Шия
+			-@products.each do |product|
+				-if product.category == "Яловичина"
+					.large-3.medium-4.columns.category-b.mix.inport data-order="#{product.price}" class=("inport" if product.import == true) class=("export" if product.export == true)
+						.one-product.popup-btn data-btn-attr="order-form" data-popup-ajax="#{product.id}"
+							.inner-container
+								.img-product style="background-image: url(#{product.image})"
+								.apt APT.#{product.article_num}
+								.manufacturer-box #{product.country} | #{product.company_name}
+								.prise.font-ad #{product.price} грн
+							.title #{product.name}
+				-if product.category == "Cвинина"
+					.large-3.medium-4.columns.category-a.mix.inport data-order="#{product.price}" class=("inport" if product.import == true) class=("export" if product.export == true)
+						.one-product.popup-btn data-btn-attr="order-form" data-popup-ajax="#{product.id}"
+							.inner-container
+								.img-product style="background-image: url(#{product.image})"
+								.apt APT.#{product.article_num}
+								.manufacturer-box #{product.country} | #{product.company_name}
+								.prise.font-ad #{product.price} грн
+							.title #{product.name}
+				-if product.category == "Курятина"
+					.large-3.medium-4.columns.category-c.mix data-order="#{product.price}" class=("inport" if product.import == true) class=("export" if product.export == true)
+						.one-product.popup-btn data-btn-attr="order-form" data-popup-ajax="#{product.id}"
+							.inner-container
+								.img-product style="background-image: url(#{product.image})"
+								.apt APT.#{product.article_num}
+								.manufacturer-box #{product.country} | #{product.company_name}
+								.prise.font-ad #{product.price} грн
+							.title #{product.name}
+				-if product.category == "Індичатина"
+					.large-3.medium-4.columns.category-d.mix.inport data-order="#{product.price}" class=("inport" if product.import == true) class=("export" if product.export == true)
+						.one-product.popup-btn data-btn-attr="order-form" data-popup-ajax="#{product.id}"
+							.inner-container
+								.img-product style="background-image: url(#{product.image})"
+								.apt APT.#{product.article_num}
+								.manufacturer-box #{product.country} | #{product.company_name}
+								.prise.font-ad #{product.price} грн
+							.title #{product.name}
 
 
-			.large-3.medium-4.columns.category-a.mix.export data-order="2"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box Гавайські острова
-						.prise.font-ad 12 грн
-					.title Шия
-
-			.large-3.medium-4.columns.category-d.mix.export data-order="220"
-				.one-product.popup-btn data-btn-attr="order-form"
-					.inner-container
-						.img-product style="background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})"
-						.apt APT.6573331
-						.manufacturer-box Бермудський трикутник
-						.prise.font-ad 120 грн
-					.title Шия
 
 
 	.padination-box

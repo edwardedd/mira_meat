@@ -32,6 +32,7 @@ class PagesController < ApplicationController
   end
 
   def products_page
+    @products = Product.all.show
   end
 
   def retail_page
@@ -51,6 +52,8 @@ class PagesController < ApplicationController
   end
   def policy
     @policy = Policy.first
+  end
+  def productpopup
   end
   private
   def info

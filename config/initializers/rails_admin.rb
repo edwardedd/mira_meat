@@ -89,7 +89,7 @@ RailsAdmin.config do |config|
     label "Одиниця продукціі"
     include_fields :name, :part_of_meat, :article_num, :country, :company_name, :image, :temperature, :import, :export, :present, :show, :price, :freeze_type
     field :category, :enum do
-     enum [" Cвинина","Яловичина","Курятина","Індичатина"]
+     enum ["Cвинина","Яловичина","Курятина","Індичатина"]
    end
   end
   config.model Contact do
