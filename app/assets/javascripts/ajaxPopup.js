@@ -3,7 +3,7 @@ $(document).on('click','.one-product', function(){
 	var attr = $(this).data("popup-ajax");
 
 	$.get('/product/' + attr, function(data){
-		$(".product-popup .left-part .img-bg").text(data.image)
+		$(".product-popup .left-part .img-bg").text(data.image.url )
 
 		$(".product-popup .right-part .big-title.black").text(data.name)
 		// $(".product-popup .right-part .sub-title").text(data.description)
@@ -18,9 +18,9 @@ $(document).on('click','.one-product', function(){
 		// 	$(".product-popup .right-part .info-block .one-info-block .present").text("p123213d")
 		// }
 		$(".product-popup .right-part .info-block .one-info-block .temperature").text(data.temperature)
-		
 
-		
+
+
 	});
-		
+
 })

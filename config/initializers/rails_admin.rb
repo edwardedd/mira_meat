@@ -39,7 +39,7 @@ RailsAdmin.config do |config|
     # history_show
 
   end
-  config.included_models = [Vacancy,Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider,Headerslider]
+  config.included_models = [Vacancy,Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider]
     config.model History do
       navigation_label "Про нас"
       label " Наша Історія"
@@ -106,7 +106,7 @@ RailsAdmin.config do |config|
   config.model Retailslider do
     navigation_label "Роздріб"
     label "Роздріб слайдер"
-    include_fields :image, :first_title, :second_title, :show
+    include_fields :image, :first_title, :show
   end
 
   config.model Retail do
