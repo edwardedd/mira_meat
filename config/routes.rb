@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get "policy", action: "policy"
     get "product-popup", action: "productpopup"
     get "donwload", action: "donwload"
+    get "product/:id", action: "product", as: "product"
   end
 
   match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]
