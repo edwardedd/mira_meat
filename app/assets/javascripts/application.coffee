@@ -33,3 +33,5 @@
 #= require links
 #= require play-video
 #= require jquery_form
+
+#= require ajaxPopup

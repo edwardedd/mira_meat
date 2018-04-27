@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     get "wholesale-page", action: "wholesale_page"
     post "consultation", action: "consultation"
     get "policy", action: "policy"
-    get "product-popup", action: "productpopup"
+    get "productPopup", action: "productpopup"
     get "donwload", action: "donwload"
   end
 
