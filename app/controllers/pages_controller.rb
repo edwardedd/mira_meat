@@ -58,6 +58,10 @@ class PagesController < ApplicationController
   def donwload(file)
     send_file Aboutus.first.file
   end
+  def product
+    @product = Product.find(params[:id])
+    render json: @product
+  end
   private
   def info
     @headerslider = Headerslider.show

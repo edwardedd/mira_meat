@@ -87,9 +87,8 @@ gem 'kaminari'
 #gem 'cms', path: "/media/data/pasha/gems/cms"
 
 # gem 'cms', github: "pkorenev/cms"
-
-# gem 'require_reloader'
-
+gem 'figaro'
+# gem 'require_reloader''
 gem 'thin'
 gem 'puma'
 gem 'rails_admin'

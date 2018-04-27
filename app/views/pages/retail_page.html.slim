@@ -12,26 +12,14 @@
 				/ .big-title
 				/ 	=@retail.third_title
 				/ 	.line
-	
-	.row
-		.columns.medium-6.large-3
-			.one-product-tupe-box
-				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
-				.title-svg-line-box.white відкриття власних магазинів
-		.columns.medium-6.large-3
-			.one-product-tupe-box
-				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
-				.title-svg-line-box.white мережі супермаркетів
-		.columns.medium-6.large-3
-			.one-product-tupe-box
-				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
-				.title-svg-line-box.white гурт
-		.columns.medium-6.large-3
-			.one-product-tupe-box
-				.img-bg style="background-image: url(#{asset_path('photo/MM-img-production-v1.jpg')})"
-				.title-svg-line-box.white дрібний гурт для не великих підприємств
-					
 
+	.row
+		-@retailslider[0 .. 3].each do |slide|
+			.columns.medium-6.large-3
+				.one-product-tupe-box
+					.img-bg style="background-image: url(#{slide.image})"
+					.title-svg-line-box.white
+						=slide.first_title
 
 
 
