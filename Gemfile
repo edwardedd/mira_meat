@@ -88,8 +88,7 @@ gem 'kaminari'
 
 # gem 'cms', github: "pkorenev/cms"
 
-# gem 'require_reloader'
-
+# gem 'require_reloader''
 gem 'thin'
 gem 'puma'
 gem 'rails_admin'

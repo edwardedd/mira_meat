@@ -60,6 +60,7 @@ class PagesController < ApplicationController
   end
   def product
     @product = Product.find(params[:id])
+    render json: @product
   end
   private
   def info
