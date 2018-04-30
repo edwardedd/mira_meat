@@ -39,7 +39,22 @@ RailsAdmin.config do |config|
     # history_show
 
   end
-  config.included_models = [Vacancy,Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider]
+  config.included_models = [Vacancyform,Order,Consultation,Vacancy,Policy,Main,History,Aboutus,Article,Sertificate,Product,Contact,Retail,User,Retailslider,Wholesale,Production,Footerslider]
+    config.model Vacancyform do
+      navigation_label "Звязок"
+      label "Резюме"
+      include_fields :name, :phone, :vacancy_name, :email, :file
+    end
+    config.model Order do
+      navigation_label "Звязок"
+      label "Замовлення"
+      include_fields :name,:phone, :email, :category, :amount, :comment
+    end
+    config.model Consultation do
+      navigation_label "Звязок"
+      label "Консультація"
+      include_fields :name, :phone, :email, :comment
+    end
     config.model History do
       navigation_label "Про нас"
       label " Наша Історія"
