@@ -48,6 +48,7 @@ class PagesController < ApplicationController
     @wholesale =  Wholesale.first
   end
   def consultation
+    binding.pry
     render json: {}
   end
   def policy
@@ -66,9 +67,11 @@ class PagesController < ApplicationController
     render json: @vacancy
   end
   def order
+    binding.pry
     render json: {}
   end
   def vacancy_form
+    binding.pry
     render json: {}
   end
   private

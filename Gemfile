@@ -88,6 +88,7 @@ gem 'kaminari'
 
 # gem 'cms', github: "pkorenev/cms"
 gem 'figaro'
+gem 'pry'
 # gem 'require_reloader''
 gem 'thin'
 gem 'puma'
