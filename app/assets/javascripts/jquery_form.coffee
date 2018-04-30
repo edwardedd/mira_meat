@@ -20,5 +20,5 @@ $document.on 'submit', 'form.ajax-form', (e)->
 				$(".success-popup-wrap").removeClass("visible")
 				$('body').removeClass('opened-popup')
 				), 1000
-			$(this)[0].reset()
+			$(this)[0].reset();
 	})
