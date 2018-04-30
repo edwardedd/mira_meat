@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430074748) do
+ActiveRecord::Schema.define(version: 20180430134908) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -186,6 +186,15 @@ ActiveRecord::Schema.define(version: 20180430074748) do
     t.string  "vacancy"
     t.integer "salary"
     t.boolean "show"
+  end
+
+  create_table "vacancyforms", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
+    t.string "file"
+    t.string "vacancy_name"
+    t.string "surname"
   end
 
   create_table "wholesales", force: :cascade do |t|

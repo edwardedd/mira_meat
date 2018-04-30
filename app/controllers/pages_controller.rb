@@ -48,6 +48,12 @@ class PagesController < ApplicationController
     @wholesale =  Wholesale.first
   end
   def consultation
+    @consultation = Consultation.new
+    @consultation.name = params[:firstname]
+    @consultation.phone = params[:phone]
+    @consultation.email = params[:mail]
+    @consultation.comment = params[:comment]
+    @consultation.save
     render json: {}
   end
   def policy
@@ -66,9 +72,25 @@ class PagesController < ApplicationController
     render json: @vacancy
   end
   def order
+    order = Order.new
+    order.name = params[:firstname]
+    order.phone = params[:phone]
+    order.email = params[:mail]
+    order.amount = params[:value]
+    order.category = params[:category]
+    order.comment = params[:comment]
+    order.save
     render json: {}
   end
   def vacancy_form
+    vacancy_form = Vacancyform.new
+    vacancy_form.name = params[:firstname]
+    vacancy_form.surname = params[:lastnane]
+    vacancy_form.vacancy_name = "SSSS"
+    vacancy_form.email = params[:mail]
+    vacancy_form.phone  = params[:phone]
+    vacancy_form.file = params[:resume].tempfile
+    vacancy_form.save
     render json: {}
   end
   private
