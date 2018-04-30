@@ -18,8 +18,24 @@ $(document).on('click','.one-product', function(){
 		// 	$(".product-popup .right-part .info-block .one-info-block .present").text("p123213d")
 		// }
 		$(".product-popup .right-part .info-block .one-info-block .temperature").text(data.temperature)
+		$('.popup-wrapper .title').text(data.name)
 
 
+
+	});
+
+})
+
+
+///// V A C A N S Y   A J A X  //////
+
+$(document).on('click','.one-vacancies-box', function(){
+
+	var attr = $(this).data("popup-ajax");
+
+	$.get('/vacancy/' + attr, function(data){
+		$(".info-work-popup .inner-popup .title").text(data.vacancy)
+		$(".info-work-popup .inner-popup .money ").text(data.salary)
 
 	});
 

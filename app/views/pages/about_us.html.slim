@@ -45,8 +45,9 @@
 				-else
 					.row
 						.medium-2.columns
-							.date.font-ad.dib #{history.first.year}
-							.red-line.big.dib
+							.year-box
+								.date.font-ad.dib #{history.first.year}
+								.red-line.big.dib
 						.medium-10.columns
 							-history.each do |h|
 								.accordion-button
@@ -81,7 +82,7 @@
 	.vacancies-wrap.white-bg
 		.row
 			.columns
-				.big-title.black наша історія
+				.big-title.black наші вакансії
 				.red-line.big
 				p =@about_us.history_text
 
@@ -90,7 +91,7 @@
 				-if @vacancy
 					-@vacancy.each do |vacancy|
 						.columns.large-4.medium-6
-							.one-vacancies-box.popup-work-btn
+							.one-vacancies-box.popup-work-btn data-popup-ajax="#{vacancy.id}"
 								.big-title.black =vacancy.vacancy
 								.price від #{vacancy.salary} грн
 								= inline_svg "svg/mm-button-plus.svg"

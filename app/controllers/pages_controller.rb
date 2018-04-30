@@ -66,8 +66,11 @@ class PagesController < ApplicationController
     render json: @vacancy
   end
   def order
+    render json: {}
   end
-
+  def vacancy_form
+    render json: {}
+  end
   private
   def info
     @headerslider = Headerslider.show

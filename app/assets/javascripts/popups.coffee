@@ -11,15 +11,15 @@ $document.ready ->
 
   
 
-  $('.popup-wrapper .button').on "click", ->
+  # $('.popup-wrapper .button').on "click", ->
     # $(this).css("color","#00A029")
-    $('.success').addClass("visible")
-    setTimeout (->
-      $('.success').removeClass("visible")
-    ), 13000
-    setTimeout (->
-      $('.popup-wrapper .button').css("color","white")
-    ), 13800
+    # $('.success').addClass("visible")
+    # setTimeout (->
+    #   $('.success').removeClass("visible")
+    # ), 13000
+    # setTimeout (->
+    #   $('.popup-wrapper .button').css("color","white")
+    # ), 13800
 
 
 $(document).on 'click', '.popup-btn', ()->  
@@ -36,11 +36,11 @@ $(document).on 'click', '.popup-work-btn', ()->
 
 $document.on 'click', ->
   if $('.popup-wrapper').hasClass('visible')
-    $.clickOut('.popup-wrapper',
+    $.clickOut('form',
     ()->
       $('.popup-wrapper').removeClass('visible')
       $('body').removeClass('opened-popup')
-    {except: ".order-popup-btn, .popup-wrapper"}
+    {except: ".order-popup-btn, form"}
     )
 
   if $('.product-popup').hasClass('visible')
