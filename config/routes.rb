@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     get "productPopup", action: "productpopup"
     get "donwload", action: "donwload"
     get "product/:id", action: "product", as: "product"
+    get "vacancy/:id", action: "vacancy", as: "vacancy"
+    post "order", action: "order"
   end
 
   match "*url", to: "application#render_not_found", via: [:get, :post, :path, :put, :update, :delete]

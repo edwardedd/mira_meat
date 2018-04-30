@@ -53,8 +53,7 @@ class PagesController < ApplicationController
   def policy
     @policy = Policy.first
   end
-  def productpopup
-  end
+
   def donwload(file)
     send_file Aboutus.first.file
   end
@@ -62,6 +61,13 @@ class PagesController < ApplicationController
     @product = Product.find(params[:id])
     render json: @product
   end
+  def vacancy
+    @vacancy = Vacancy.find(params[:id])
+    render json: @vacancy
+  end
+  def order
+  end
+
   private
   def info
     @headerslider = Headerslider.show
