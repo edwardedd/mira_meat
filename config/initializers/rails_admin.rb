@@ -87,7 +87,7 @@ RailsAdmin.config do |config|
   config.model Product do
     navigation_label "Продукти"
     label "Одиниця продукціі"
-    include_fields :name, :part_of_meat, :article_num, :country, :company_name, :image, :temperature, :import, :export, :present, :show, :price, :freeze_type
+    include_fields :name, :product_description,:part_of_meat, :article_num, :country, :company_name, :image, :temperature, :import, :export, :present, :show, :price, :freeze_type
     field :category, :enum do
      enum ["Cвинина","Яловичина","Курятина","Індичатина"]
    end
