@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426125500) do
+ActiveRecord::Schema.define(version: 20180430073352) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -55,6 +55,13 @@ ActiveRecord::Schema.define(version: 20180426125500) do
 
   add_index "ckeditor_assets", ["type"], name: "index_ckeditor_assets_on_type"
 
+  create_table "consultations", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
+    t.text   "comment"
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string "first_number"
     t.string "second_number"
@@ -94,6 +101,15 @@ ActiveRecord::Schema.define(version: 20180426125500) do
     t.text   "fourth_description"
     t.string "video_link"
     t.string "video_cover"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "name"
+    t.string "phone"
+    t.string "email"
+    t.string "category"
+    t.string "amount"
+    t.text   "comment"
   end
 
   create_table "policies", force: :cascade do |t|

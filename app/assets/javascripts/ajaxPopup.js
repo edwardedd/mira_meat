@@ -3,7 +3,7 @@ $(document).on('click','.one-product', function(){
 	var attr = $(this).data("popup-ajax");
 
 	$.get('/product/' + attr, function(data){
-		$(".product-popup .left-part .img-bg").text(data.image.url )
+		$(".product-popup .left-part .img-bg img").text(data.image.url)
 
 		$(".product-popup .right-part .big-title.black").text(data.name)
 		// $(".product-popup .right-part .sub-title").text(data.description)
