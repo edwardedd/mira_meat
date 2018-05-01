@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
+  body
+    h3
+      | MiraMeat
+    h5
+      | Нове замовлення
+  =@order.name
+  br
+  =@order.phone
+  br
+  =@order.email
+  br
+  =@order.category
+  br
+  =@order.amount
+  br
+  =@order.comment

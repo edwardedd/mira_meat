@@ -1,63 +1,46 @@
-$document.ready ->
-  $('.order-popup-btn').on "click", ->
-    $('.popup-wrapper').addClass('visible')
-    $('body').addClass('opened-popup')
-    if $('.product-popup').hasClass('visible')
-      $('.product-popup').removeClass('visible')
 
-  $('.close-popup').on 'click', ->
-  	$(".popup-wrapper").removeClass('visible')
-  	$('body').removeClass('opened-popup')
+$(document).on 'click', '.order-popup-btn', ()->  
+	$('.popup-wrapper').addClass('visible')
+	$('body').addClass('opened-popup')
+	if $('.product-popup').hasClass('visible')
+		$('.product-popup').removeClass('visible')
 
-  
+	$('.close-popup').on 'click', ->
+		$(".popup-wrapper").removeClass('visible')
+		$('body').removeClass('opened-popup')
 
-  $('.popup-wrapper .button').on "click", ->
-    # $(this).css("color","#00A029")
-    $('.success').addClass("visible")
-    setTimeout (->
-      $('.success').removeClass("visible")
-    ), 13000
-    setTimeout (->
-      $('.popup-wrapper .button').css("color","white")
-    ), 13800
 
 
 $(document).on 'click', '.popup-btn', ()->  
 
-  attr = $(this).attr('data-btn-attr')
-  $('body').addClass('opened-popup')
-  $('.product-popup[data-form-attr="'+attr+'"]').addClass('visible')
-  
+	attr = $(this).attr('data-btn-attr')
+	$('body').addClass('opened-popup')
+	$('.product-popup[data-form-attr="'+attr+'"]').addClass('visible')
+	
 $(document).on 'click', '.popup-work-btn', ()-> 
 
-  $('.info-work-popup').addClass('visible')
-  $('body').addClass('opened-popup')
+	$('.info-work-popup').addClass('visible')
+	$('body').addClass('opened-popup')
 
 
-$document.on 'click', ->
-  if $('.popup-wrapper').hasClass('visible')
-    $.clickOut('.popup-wrapper',
-    ()->
-      $('.popup-wrapper').removeClass('visible')
-      $('body').removeClass('opened-popup')
-    {except: ".order-popup-btn, .popup-wrapper"}
-    )
+$.clickOut('.popup-wrapper',
+	()->
+		$('.popup-wrapper').removeClass('visible')
+		$('body').removeClass('opened-popup')
+	{except: ".popup-btn, .popup-work-btn, .order-popup-btn, .product-popup, .info-work-popup"}
+	)
 
-  if $('.product-popup').hasClass('visible')
-    $.clickOut('.product-popup',
-    ()->
-      $('.product-popup').removeClass('visible')
-      $('body').removeClass('opened-popup')
-    {except: '.popup-btn, .product-popup'}
-    )
+$.clickOut('.product-popup',
+	()->
+		$('.product-popup').removeClass('visible')
+		$('body').removeClass('opened-popup')
+	{except: '.popup-btn, .popup-work-btn, .popup-wrapper, .info-work-popup, .order-popup-btn'}
+	)
 
-  if $(".info-work-popup").hasClass('visible')
-    $.clickOut('.inner-popup',
-      ()->
-        $('.info-work-popup').removeClass('visible')
-        $('body').removeClass('opened-popup')
-    {except: '.popup-work-btn, .inner-popup'}
-    )
-   
+$.clickOut('.info-work-popup',
+	()->
+		$('.info-work-popup').removeClass('visible')
+		$('body').removeClass('opened-popup')
+	{except: '.popup-btn, .popup-work-btn, .popup-wrapper, .product-popup, .order-popup-btn'}
+)
 
-  

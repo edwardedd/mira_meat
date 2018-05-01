@@ -2,20 +2,33 @@
 	.close-popup = inline_svg "svg/MM-menu-close-v1.svg"
 	.inner-popup
 		.title.font-ad Інженер механік
-		.sub-title відправте ваші данні
-		form
-			.input-field
-				input#name name="firstname"
+		.money 
+
+		form.ajax-form action="/vacancy_form" method="post" enctype="multipart/form-data"
+			.input-field.columnssss
+				input#name name="firstname" required=""
 				label Імʼя
+			.input-field.columnssss
+				input#lastname name="lastname" required=""
+				label Прізвище
 			.input-field
-				input#phone name="phone"
+				input#phone name="phone" required=""
 				label Телефон
 			.input-field
-				input#mail name="mail"
+				input#mail name="mail" required=""
 				label Ел.скринька
+			.id.input-field
+				input#id name="id" 
+			
 			button.button.red-btn
-				| замовити
+				| надіслати
 				.inner-border
+			
+			.upload-btn
+				input#resume name="resume" type="file" accept=".doc, .docx, .txt, .pdf, .zip" required=""
+				.button.dib
+					.inner-border
+			 		= inline_svg "svg/mm-button-download.svg"
 
 		.success.white-bg
 			.title ваша заявка успішно відправленна

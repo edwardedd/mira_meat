@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
+  body
+    h3
+      | MiraMeat
+    h5
+      | Нова вакансія
+    =@cv.name
+    br
+    =@cv.surname
+    br
+    =@cv.phone
+    br
+    =@cv.email
+    br
+    =@cv.vacancy_name
+    br
+    = link_to "Резюме", "#{@cv.file}"

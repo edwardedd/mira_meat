@@ -21,6 +21,7 @@ class PagesController < ApplicationController
   end
 
   def one_news_page
+    # Article.where(url_part: params[:id]).first
     @article = Article.find(params[:id])
     @next = Article.where(["id > ?", params[:id]]).show.first
     @previous = Article.where(["id < ?", params[:id]]).show.last
@@ -48,19 +49,55 @@ class PagesController < ApplicationController
     @wholesale =  Wholesale.first
   end
   def consultation
+    @consultation = Consultation.new
+    @consultation.name = params[:firstname]
+    @consultation.phone = params[:phone]
+    @consultation.email = params[:mail]
+    @consultation.comment = params[:textarea]
+    @consultation.save
     render json: {}
   end
   def policy
     @policy = Policy.first
   end
-  def productpopup
-  end
+
   def donwload(file)
     send_file Aboutus.first.file
   end
   def product
     @product = Product.find(params[:id])
     render json: @product
+  end
+  def vacancy
+    @vacancy = Vacancy.find(params[:id])
+    render json: @vacancy
+  end
+  def order
+    binding.pry
+    order = Order.new
+    order.name = params[:firstname]
+    order.phone = params[:phone]
+    order.email = params[:mail]
+    order.amount = params[:value]
+    if params[:id] == ""
+      order.category = "-"
+    else
+      order.category = Product.find(params[:id]).name
+    end
+    order.comment = params[:textarea]
+    order.save
+    render json: {}
+  end
+  def vacancy_form
+    vacancy_form = Vacancyform.new
+    vacancy_form.name = params[:firstname]
+    vacancy_form.surname = params[:lastname]
+    vacancy_form.vacancy_name = Vacancy.find(params[:id]).vacancy
+    vacancy_form.email = params[:mail]
+    vacancy_form.phone  = params[:phone]
+    vacancy_form.file = params[:resume].tempfile
+    vacancy_form.save
+    render json: {}
   end
   private
   def info

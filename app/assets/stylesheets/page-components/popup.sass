@@ -37,14 +37,47 @@
 		text-align: center
 		text-transform: uppercase
 		padding-top: 20px
-	.sub-title
+	
+	.present
+		display: none
+	.product-no-present, .product-present
+		display: none
+		font-weight: 600
+		&.active
+			display: block
+	.sub-title, .money, .price
 		font-size: 20px
 		text-align: center
 		padding-top: 10px
+	.money, .price
+		&:before, &:after
+			display: inline-block
+			position: relative
+	.price
+		text-align: left
+		&:after
+			content: "грн"
+			font-size: 12px
+			margin-left: 5px
+	.money
+		&:before
+			content: "від"
+			text-transform: uppercase
+			margin-right: 5px
+			font-size: 14px
+		&:after
+			content: "грн"
+			font-size: 12px
+			margin-left: 5px
 	form
 		.button
-			+x-align
-
+			float: right
+			&.center
+				+x-align
+	
+	.id
+		opacity: 0
+		pointer-events: none
 	.success
 		opacity: 0
 		z-index: 100
@@ -60,6 +93,37 @@
 	padding: 5px 50px 50px 50px
 
 
+.info-work-popup
+	.input-field
+		&.columnssss
+			width: 50%
+			display: inline-block
+			margin: 20px 0 0px
+			&:first-child
+				margin: 20px 10px 0px 0
+				width: calc(50% - 10px )
+
+	.upload-btn
+		float: left !important
+		position: relative
+		input
+			opacity: 0
+			width: 50px
+			height: 50px
+
+		.button
+			width: 50px
+			height: 50px
+			padding: 0
+			position: absolute
+			left: 0
+			z-index: -1
+			svg
+				width: 50px
+				height: 50px
+				+rotate(180deg)
+				cursor: pointer
+
 .product-popup
 	padding: 0
 	width: 80%
@@ -69,8 +133,7 @@
 		vertical-align: top
 		position: relative
 		.img-bg
-			height: 50vh
-			background-size: contain
+			transition: 0s !important
 	.left-part
 		width: 40%
 		background-color: white

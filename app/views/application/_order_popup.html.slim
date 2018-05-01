@@ -1,40 +1,43 @@
 .popup-wrapper.white-bg
 	.close-popup = inline_svg "svg/MM-menu-close-v1.svg"
 	.title.font-ad форма замовлення
-	form.ajax-form
+	form.ajax-form action="/order" method="post" enctype="multipart/form-data"
 		.input-field
-			input#name name="firstname"
+			input#name name="firstname" required=""
 			label Імʼя
 		.input-field
-			input#phone name="phone"
+			input#phone name="phone" required=""
 			label Телефон
 		.input-field
-			input#mail name="mail"
+			input#mail name="mail" required=""
 			label Ел.скринька
-		.input-field
-			select
-				option value="all" Вся прокукція
-				option value=".inport" asd
-				option value=".export" meat
-				option value=".inport" Fish
-				option value=".export" Bread
-				option value=".inport" Potato
-				option value=".export" Onion
-				option value=".inport" Milck
-				option value=".export" pokl
-				option value=".inport" asdasodkl
-		.input-field
-			select
+		/ .input-field
+		/ 	select
+		/ 		option value="all" Вся прокукція
+		/ 		option value=".inport" asd
+		/ 		option value=".export" meat
+		/ 		option value=".inport" Fish
+		/ 		option value=".export" Bread
+		/ 		option value=".inport" Potato
+		/ 		option value=".export" Onion
+		/ 		option value=".inport" Milck
+		/ 		option value=".export" pokl
+		/ 		option value=".inport" asdasodkl
+		.input-field 
+			select#value name="value" required=""
 				option value="" data-sort="" Кількість
-				option value="" data-sort="" 200-1000кг(дрібний гурт)
-				option value="" data-sort="" 1000-5000кг(пацанський гурт)
-				option value="" data-sort="" 10-50тон(гурт 80lv)
+				option value="200-1000кг" data-sort="" 200-1000кг(дрібний гурт)
+				option value="1000-5000кг" data-sort="" 1000-5000кг(пацанський гурт)
+				option value="10-50тон" data-sort="" 10-50тон(гурт 80lv)
 
-		.input-field
-			textarea#textarea rows="10"
+		.input-field 
+			textarea#textarea name="textarea" rows="10" required=""
 			label.textarea ваші побажання...
 
-		button.button.red-btn
+		.id.input-field
+			input#id name="id" 
+
+		button.button.red-btn.center
 			| замовити
 			.inner-border
 

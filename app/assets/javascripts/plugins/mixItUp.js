@@ -47,6 +47,7 @@ $(document).ready(function(){
   });
   
   $sortSelect.on('change', function(){
+    console.log('sort: ', this.value)
     $container.mixItUp('sort', this.value);
   });
 });

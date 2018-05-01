@@ -87,10 +87,16 @@
 
 		.accordion-box
 			padding-top: 50px
-			.date
-				font-size: 80px
-			.red-line
-				margin: 0 0 0 30px
+			.year-box
+				position: relative
+				.date
+					font-size: 65px
+				.red-line
+					position: absolute
+					top: 10px
+					right: 0
+					+breakpoint(large down)
+						display: none
 
 		.img-container
 			width: 50%
@@ -214,6 +220,12 @@
 				svg
 					width: 50px
 					height: 45px
+				&:hover
+					border: none
+					svg
+					.st1
+						fill: white 
+
 
 			+breakpoint(small only)
 				width: 100%
