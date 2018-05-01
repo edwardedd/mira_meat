@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430134908) do
+ActiveRecord::Schema.define(version: 20180501134922) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180430134908) do
     t.text    "second_description"
     t.text    "photo_description"
     t.boolean "show"
+    t.string  "url_fragment"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

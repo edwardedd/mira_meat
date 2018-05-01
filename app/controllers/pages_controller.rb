@@ -22,7 +22,8 @@ class PagesController < ApplicationController
 
   def one_news_page
     # Article.where(url_part: params[:id]).first
-    @article = Article.find(params[:id])
+    @article = Article.where(url_fragment: params[:id]).first
+    return render 'errors/not_found.html', status: 404 unless @article
     @next = Article.where(["id > ?", params[:id]]).show.first
     @previous = Article.where(["id < ?", params[:id]]).show.last
   	@black_header = true
