@@ -11,7 +11,7 @@ class Article < ActiveRecord::Base
         self.url_fragment = title.parameterize
     end
 	end
-	def to_param
-			 url_fragment
-	 end
+ def to_param
+	 url_fragment
+ end
 end
