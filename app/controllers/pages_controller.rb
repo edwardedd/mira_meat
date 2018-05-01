@@ -73,7 +73,6 @@ class PagesController < ApplicationController
     render json: @vacancy
   end
   def order
-    binding.pry
     order = Order.new
     order.name = params[:firstname]
     order.phone = params[:phone]
