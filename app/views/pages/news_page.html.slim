@@ -17,7 +17,7 @@
 		.row.columns-left
 			- @article.drop(1).each do |article|
 				.medium-6.large-4.columns
-					a.news-one href=one_news_page_path(article)
+					a.news-one href=one_news_page_path(article) 
 						.date =article.date
 						.big-title =article.title
 						p  =article.second_title
