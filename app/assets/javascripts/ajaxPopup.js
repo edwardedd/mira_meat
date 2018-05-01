@@ -3,7 +3,7 @@ $(document).on('click','.one-product', function(){
 	var attr = $(this).data("popup-ajax");
 
 	$.get('/product/' + attr, function(data){
-		$(".product-popup .left-part .img-bg img").text(data.image.url)
+		$(".product-popup .left-part .img-bg").css('backgroundImage', 'url(' + data.image.url + ')')
 
 		$(".product-popup .right-part .big-title.black").text(data.name)
 		$(".product-popup .right-part .sub-title").text(data.description)
@@ -22,7 +22,7 @@ $(document).on('click','.one-product', function(){
 			}
 		$(".product-popup .right-part .info-block .one-info-block .temperature").text(data.temperature)
 		$('.popup-wrapper .title').text(data.name)
-		$('.popup-wrapper .input-field.id input value').text(data.id)
+		$('.popup-wrapper .id input:text').val(data.id)
 	});
 })
 
@@ -36,7 +36,6 @@ $(document).on('click','.one-vacancies-box', function(){
 	$.get('/vacancy/' + attr, function(data){
 		$(".info-work-popup .inner-popup .title").text(data.vacancy)
 		$(".info-work-popup .inner-popup .money ").text(data.salary)
-
+		$('.info-work-popup .id input:text').val(data.id)
 	});
-
 })

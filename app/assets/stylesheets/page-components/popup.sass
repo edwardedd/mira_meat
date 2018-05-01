@@ -74,7 +74,10 @@
 			float: right
 			&.center
 				+x-align
-
+	
+	.id
+		opacity: 0
+		pointer-events: none
 	.success
 		opacity: 0
 		z-index: 100
@@ -88,6 +91,7 @@
 			margin-top: 100px
 .popup-wrapper
 	padding: 5px 50px 50px 50px
+
 
 .info-work-popup
 	.input-field
@@ -129,9 +133,7 @@
 		vertical-align: top
 		position: relative
 		.img-bg
-			height: 50vh
-			background-size: contain
-			// background-image: url(#{asset_path('photo/mm-peace_of_meat.jpg')})
+			transition: 0s !important
 	.left-part
 		width: 40%
 		background-color: white
