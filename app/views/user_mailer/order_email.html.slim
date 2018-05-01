@@ -4,7 +4,17 @@ html
     meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
   body
     h3
-      | Tax Free club
+      | MiraMeat
     h5
-      | Ваша заявка на партнерство прийнята, наш менеджер найближчим часо звяжиться з вами
+      | Нове замовлення
   =@order.name
+  br
+  =@order.phone
+  br
+  =@order.email
+  br
+  =@order.category
+  br
+  =@order.amount
+  br
+  =@order.comment

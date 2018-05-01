@@ -43,7 +43,7 @@ RailsAdmin.config do |config|
     config.model Vacancyform do
       navigation_label "Звязок"
       label "Резюме"
-      include_fields :name, :phone, :vacancy_name, :email, :file
+      include_fields :name, :surname, :phone, :vacancy_name, :email, :file
     end
     config.model Order do
       navigation_label "Звязок"

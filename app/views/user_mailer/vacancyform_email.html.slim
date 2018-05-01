@@ -4,7 +4,17 @@ html
     meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
   body
     h3
-      | Tax Free club
+      | MiraMeat
     h5
-      | Ваша заявка на консультацію прийнята, наш менеджер найближчим часо звяжиться з вами
+      | Нова вакансія
     =@cv.name
+    br
+    =@cv.surname
+    br
+    =@cv.phone
+    br
+    =@cv.email
+    br
+    =@cv.vacancy_name
+    br
+    = link_to "Резюме", "#{@cv.file}"
