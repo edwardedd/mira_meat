@@ -17,7 +17,7 @@ uk:
         video_cover: "Обгортка для відео"
         file: "Файл для завантаження"
       article:
-        title: "Загаловок"
+        title: "Заголовок"
         date: "Дата"
         second_title: "Підзаголвоок"
         main_image: "Основне зображення"
@@ -63,7 +63,7 @@ uk:
         second_title: "Другий заголовок"
         second_image: "Друге зображення"
         description: "Опис"
-        review_title: "Загаловок відгуків"
+        review_title: "Заголовок відгуків"
         review_description: "Відгуки опис"
       product:
         name: "Назва"
@@ -126,3 +126,5 @@ uk:
         image: "Картинка"
         first_adress: "Адреса"
         map_link: "Посилання на карту"
+      policy:
+        text: "Текст"
