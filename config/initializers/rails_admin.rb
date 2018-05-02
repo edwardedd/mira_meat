@@ -83,7 +83,7 @@ RailsAdmin.config do |config|
         "%d.%m.%Y"
       end
       end
-      include_fields :title, :second_title, :url_fragment, :main_image, :second_image, :date, :show
+      include_fields :title, :second_title,  :main_image, :second_image, :date, :show
       field :first_description, :ck_editor
       field :second_description, :ck_editor
       field :photo_description, :ck_editor
