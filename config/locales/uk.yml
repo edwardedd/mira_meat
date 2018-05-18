@@ -25,7 +25,7 @@ uk:
         first_description: "Перший опис"
         second_description: "Другий опис"
         photo_description: "Опис фото"
-        show: "Показати"
+        show: "Опубліковано"
       consultation:
         name: "Імя"
         phone: "Телефон"
@@ -33,16 +33,16 @@ uk:
         commment: "Коментар"
       footerslider:
         image: "Зображення"
-        show:  "Показати"
+        show:  "Опубліковано"
       headerslider:
         image: "Зображення"
-        show:  "Показати"
+        show:  "Опубліковано"
       history:
         title: "Заголовок"
         year: "Рік"
         description: "Опис"
         image: "Картинка"
-        show: "Показати"
+        show: "Опубліковано"
       main:
         main_description: "Основний опис"
         second_description: "Другий опис"
@@ -77,7 +77,7 @@ uk:
         import: "Імпорт"
         export: "Експорт"
         present: "Наявність"
-        show: "Показати"
+        show: "Опубліковано"
         price: "Ціна"
         freeze_type: "Тип заморозки"
         product_description: "Опис"
@@ -91,15 +91,15 @@ uk:
         image: "Картинка"
         first_title: "Перший заголовок"
         second_title: "Другий заголовок"
-        show:  "Показати"
+        show:  "Опубліковано"
       sertificate:
         name: "Заголовок"
         image: "Зображення"
-        show:  "Показати"
+        show:  "Опубліковано"
       vacancy:
         vacancy: "Посада"
         salary: "З/П"
-        show:  "Показати"
+        show:  "Опубліковано"
       vacancyform:
         name: "Імя"
         phone: "Телефон"
