@@ -81,6 +81,7 @@ uk:
         price: "Ціна"
         freeze_type: "Тип заморозки"
         product_description: "Опис"
+        priority: "Приорітет показу"
       retail:
         main_image: "Основне зображення"
         first_title: "Перший заголовок"
