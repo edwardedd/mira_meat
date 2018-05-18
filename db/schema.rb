@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180501134922) do
+ActiveRecord::Schema.define(version: 20180518105458) do
 
   create_table "aboutus", force: :cascade do |t|
     t.string "title"
@@ -143,6 +143,7 @@ ActiveRecord::Schema.define(version: 20180501134922) do
     t.integer "price"
     t.string  "freeze_type"
     t.string  "product_description"
+    t.integer "priority"
   end
 
   create_table "retails", force: :cascade do |t|

@@ -34,7 +34,7 @@ class PagesController < ApplicationController
   end
 
   def products_page
-    @products = Product.all.show
+    @products = Product.all.show.order(:priority)
   end
 
   def retail_page
