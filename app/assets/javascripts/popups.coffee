@@ -44,3 +44,9 @@ $.clickOut('.info-work-popup',
 	{except: '.popup-btn, .popup-work-btn, .popup-wrapper, .product-popup, .order-popup-btn'}
 )
 
+
+$(document).on 'click', '.close-popup', ()->
+	$(".popup-wrapper").removeClass('visible')
+	$('.product-popup').removeClass('visible')
+	$('.info-work-popup').removeClass('visible')
+	$('body').removeClass('opened-popup')
