@@ -44,7 +44,7 @@
 		width: 100%
 		color: $white-color
 		.sub-title-banner
-			font-size: 57px
+			font-size: 56px
 			text-transform: uppercase
 			letter-spacing: 6px
 			margin-bottom: 20px
@@ -93,16 +93,22 @@
 		.content-banner
 			top: 40%
 			.sub-title-banner
-				font-size: 60px
+				font-size: 77px
 
 			.title
-				font-size: 230px
+				font-size: 268px
 				line-height: 0.7
+				padding-left: 0
 				&:before, &:after
 					width: 20px
+				&:before
+					left: -25px
 				&:after
-					right: 80px
-
+					right: 55px
+	
+	@media only screen and (min-width: 1430px) and (max-width: 1750px)
+		.content-banner
+			top: 50%
 	@media only screen and (min-width: 640px) and (max-width: 1024px)
 		height: 65vh
 		.slick-slide
