@@ -59,6 +59,7 @@ class PagesController < ApplicationController
     render json: {}
   end
   def policy
+    @black_header = true
     @policy = Policy.first
   end
 

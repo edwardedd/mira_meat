@@ -27,21 +27,21 @@
 		-if @contact.second_number
 			li
 				a href="tel:#{@contact.second_number}" #{@contact.second_number}
-		-if @contact.third_number
-			li
-				a href="tel:#{@contact.third_number}" #{@contact.third_number}
+		/ -if @contact.third_number
+		/ 	li
+		/ 		a href="tel:#{@contact.third_number}" #{@contact.third_number}
 		li
 			a href="milito:#{@contact.first_email}" #{@contact.first_email}
-		-if @contact.second_email
-			li
-				a href="milito:#{@contact.second_email}" #{@contact.second_email}
+		/ -if @contact.second_email
+		/ 	li
+		/ 		a href="milito:#{@contact.second_email}" #{@contact.second_email}
 	.bottom-footer
 		.row
 			.medium-4.columns
 				a href="/policy" Політика конфіденсійності
 			.medium-4.columns
-				p &#xa9; &#171;Міріміт&#187; 2018.Всі права захищенно
+				p &#xa9; &#171;Міріміт&#187; 2018. Всі права захищенно
 			.medium-4.columns
-				a href=""
+				a href="voroninstudio.eu"
 					= inline_svg "svg/voronin-logo.svg"
-					span Розроблено в студії М. Вороніна
+					span Розроблено в Voronistudio
