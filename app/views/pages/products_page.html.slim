@@ -63,6 +63,15 @@
 								.manufacturer-box #{product.country} | #{product.company_name}
 								.prise.font-ad #{product.price} грн
 							.title #{product.name}
+				-if product.category == "Риба"
+					.large-3.medium-4.columns.category-d.mix.inport data-order="#{product.price}" class=("inport" if product.import == true) class=("export" if product.export == true)
+						.one-product.popup-btn data-btn-attr="order-form" data-popup-ajax="#{product.id}"
+							.inner-container
+								.img-product style="background-image: url(#{product.image})"
+								.apt APT.#{product.article_num}
+								.manufacturer-box #{product.country} | #{product.company_name}
+								.prise.font-ad #{product.price} грн
+							.title #{product.name}
 
 
 
