@@ -6,6 +6,7 @@
 
 #     P L U G I N S
 
+#= require plugins/google.Analytics.min.js
 #= require plugins/jquery-easing
 #= require plugins/jquery.scrolldelta
 #= require plugins/clickout
