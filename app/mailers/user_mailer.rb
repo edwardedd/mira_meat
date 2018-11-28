@@ -3,15 +3,15 @@ class UserMailer < ApplicationMailer
 
  def consultation_email(consultation)
    @consultation = consultation
-   mail(to: "viktor.o@voroninstudio.eu", subject: 'Заявка на консультацію')
+   mail(to: "office@voroninstudio.eu", subject: 'Заявка на консультацію')
  end
 
  def order_email(order)
    @order = order
-   mail(to: "viktor.o@voroninstudio.eu", subject: 'Заявка на замовлення')
+   mail(to: "office@voroninstudio.eu", subject: 'Заявка на замовлення')
  end
  def vacancyform_email(vacancy_form)
    @cv = vacancy_form
-   mail(to: "viktor.o@voroninstudio.eu", subject: 'Нова вакансія на #{@cv.vacancy_name}')
+   mail(to: "office@voroninstudio.eu", subject: 'Нова вакансія на #{@cv.vacancy_name}')
  end
 end
